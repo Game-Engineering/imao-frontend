@@ -35,7 +35,7 @@ Prof. Dr. Frank Dopatka [23.03.2018 18:23 Uhr via Slack]
 | 🎉 | `:tada:` | **Initial** Commit |
 | :speaker: | `:speaker:` | when Adding **Logging** |
 | :mute: | `:mute:` | when Reducing **Logging** |
-| 💡 | `:sparkles:` | **Neue Funktion** |
+| ✨ | `:sparkles:` | **Neue Funktion** |
 | :bulb: | `:bulb:` | Neue **Idea**, mit `@IDEA` Comment Tag |
 | :ribbon: | `:ribbon:`| Vom **Kunden** gewünschte Anpassungen |
 | :snowflake: | `:snowflake:` | changing **Configuration**, Usually together with :penguin: or :ribbon: or :rocket: |
