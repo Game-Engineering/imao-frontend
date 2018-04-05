@@ -35,7 +35,7 @@ public class IMAO {
 
     public void LadeZelt()
     {
-        SceneManager.LoadScene("Zelt");
+        SceneManager.LoadScene("ZeltTest");
     }
 
     public void LadeWirtschaft()

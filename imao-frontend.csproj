@@ -282,10 +282,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Zelt\CamMove.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Hotkeys.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Movement.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Tablet\MouseEventsT.cs" />
+    <Compile Include="Assets\Scenes\Zelt\trigger.cs" />
+    <Compile Include="Assets\Scenes\Zelt\Turning.cs" />
+    <Compile Include="Assets\Scenes\ZeltBackup\CamMove.cs" />
+    <Compile Include="Assets\Scenes\ZeltBackup\Hotkeys.cs" />
+    <Compile Include="Assets\Scenes\ZeltBackup\Movement.cs" />
+    <Compile Include="Assets\Scenes\ZeltBackup\Tablet\MouseEventsT.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\EingabeUeberpruefung.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\SzenenManager.cs" />
     <Compile Include="Assets\Scripts\IMAO.cs" />
@@ -303,6 +305,11 @@
     <Compile Include="Assets\Scripts\RestClientLib\model\NestedResults.cs" />
     <Compile Include="Assets\Scripts\RestClientLib\RestClient.cs" />
     <Compile Include="Assets\Scripts\RestServer.cs" />
+    <Compile Include="Assets\Serveranbindung\Backend.cs" />
+    <Compile Include="Assets\Serveranbindung\BackendStub.cs" />
+    <Compile Include="Assets\Serveranbindung\IBackend.cs" />
+    <Compile Include="Assets\Serveranbindung\Konstante.cs" />
+    <Compile Include="Assets\Serveranbindung\ParserXml.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
