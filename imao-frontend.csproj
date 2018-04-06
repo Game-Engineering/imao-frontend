@@ -283,6 +283,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindung.cs" />
+    <Compile Include="Assets\Scenes\Zelt\Dialog\Dialog.cs" />
+    <Compile Include="Assets\Scenes\Zelt\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scenes\Zelt\trigger.cs" />
     <Compile Include="Assets\Scenes\Zelt\Turning.cs" />
     <Compile Include="Assets\Scenes\ZeltBackup\CamMove.cs" />
