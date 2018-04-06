@@ -160,7 +160,7 @@ public class BackendAnbindung : MonoBehaviour {
         Debug.Log("Bin in RandomUser1");
         HttpWebRequest requestHTTP = (HttpWebRequest)WebRequest.Create(url);
         Debug.Log("Bin in RandomUser2");
-        HttpWebResponse responseHTTP = (HttpWebResponse)requestHTTP.GetResponse();
+        HttpWebResponse responseHTTP = (HttpWebResponse)requestHTTP.GetResponse(); //Hier wird der Fehler geworfen
         Debug.Log("Bin in RandomUser3");
         StreamReader reader = new StreamReader(responseHTTP.GetResponseStream());
 
