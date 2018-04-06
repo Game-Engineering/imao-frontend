@@ -150,66 +150,66 @@ public class BackendAnbindung : MonoBehaviour {
     /**
      * Unser kläglicher versuch Schach auf unser Projekt zu beziehen 
      */
-/*
-    private string getRandomUser()
-    {
-
-        string url = "https://randomuser.me/";
-        string antwort = "";
-
-        Debug.Log("Bin in RandomUser1");
-        HttpWebRequest requestHTTP = (HttpWebRequest)WebRequest.Create(url);
-        Debug.Log("Bin in RandomUser2");
-        HttpWebResponse responseHTTP = (HttpWebResponse)requestHTTP.GetResponse();
-        Debug.Log("Bin in RandomUser3");
-        StreamReader reader = new StreamReader(responseHTTP.GetResponseStream());
-
-
-        try
+    /*
+        private string getRandomUser()
         {
-            if (requestHTTP.HaveResponse == false)
+
+            string url = "https://randomuser.me/";
+            string antwort = "";
+
+            Debug.Log("Bin in RandomUser1");
+            HttpWebRequest requestHTTP = (HttpWebRequest)WebRequest.Create(url);
+            Debug.Log("Bin in RandomUser2");
+            HttpWebResponse responseHTTP = (HttpWebResponse)requestHTTP.GetResponse(); //Hier wird der Fehler geworfen
+            Debug.Log("Bin in RandomUser3");
+            StreamReader reader = new StreamReader(responseHTTP.GetResponseStream());
+
+
+            try
             {
-                throw new System.Exception("Keine Antowrt");
-            }
-            Debug.Log("This" + responseHTTP);
-     //       antwort = reader.ReadToEnd();
-        } catch (Exception e)
-        {
-            throw e;
-        } finally
-        {
-            if (responseHTTP != null)
-            {
-                responseHTTP.Close();
-            }
-            responseHTTP = null;
-            requestHTTP = null;
-        } 
-
-        return antwort;
-    }
-
-    public bool CallbackSSL(System.Object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-    {
-        bool OK = true;
-        if (sslPolicyErrors != SslPolicyErrors.None)
-        {
-            for (int i = 0; i < chain.ChainStatus.Length; i++)
-            {
-                if (chain.ChainStatus[i].Status != X509ChainStatusFlags.RevocationStatusUnknown)
+                if (requestHTTP.HaveResponse == false)
                 {
-                    chain.ChainPolicy.RevocationFlag = X509RevocationFlag.EntireChain;
-                    chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
-                    chain.ChainPolicy.UrlRetrievalTimeout = new TimeSpan(0, 1, 0);
-                    chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllFlags;
-                    bool chainIsValid = chain.Build((X509Certificate2)certificate);
-                    if (!chainIsValid) OK = false;
+                    throw new System.Exception("Keine Antowrt");
+                }
+                Debug.Log("This" + responseHTTP);
+         //       antwort = reader.ReadToEnd();
+            } catch (Exception e)
+            {
+                throw e;
+            } finally
+            {
+                if (responseHTTP != null)
+                {
+                    responseHTTP.Close();
+                }
+                responseHTTP = null;
+                requestHTTP = null;
+            } 
+
+            return antwort;
+        }
+
+        public bool CallbackSSL(System.Object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            bool OK = true;
+            if (sslPolicyErrors != SslPolicyErrors.None)
+            {
+                for (int i = 0; i < chain.ChainStatus.Length; i++)
+                {
+                    if (chain.ChainStatus[i].Status != X509ChainStatusFlags.RevocationStatusUnknown)
+                    {
+                        chain.ChainPolicy.RevocationFlag = X509RevocationFlag.EntireChain;
+                        chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
+                        chain.ChainPolicy.UrlRetrievalTimeout = new TimeSpan(0, 1, 0);
+                        chain.ChainPolicy.VerificationFlags = X509VerificationFlags.AllFlags;
+                        bool chainIsValid = chain.Build((X509Certificate2)certificate);
+                        if (!chainIsValid) OK = false;
+                    }
                 }
             }
+            return OK;
         }
-        return OK;
-    }
 
-    */
+        */
 
 }
