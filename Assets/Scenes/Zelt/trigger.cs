@@ -2,15 +2,18 @@
 using System.Collections.
 Generic;
 using UnityEngine;
+
 public class trigger : MonoBehaviour
 {
 
     public Renderer rend;
     public Canvas can;
+    public BackendAnbindung other;
 
     private Color startColor;
     private bool hovered = false;
     private UnityEngine.UI.Text clicker;
+
 
 
     private void Start()
@@ -42,6 +45,8 @@ public class trigger : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 clicker.gameObject.SetActive(false);
+
+                other.randomUser();
             }
         }
     }
