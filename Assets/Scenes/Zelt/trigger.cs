@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.
-Generic;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class trigger : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class trigger : MonoBehaviour
     private bool hovered = false;
     private UnityEngine.UI.Text clicker;
     private bool dialogGestartet;
+    private string antwort;
+    private bool patientDa = false;
 
 
     public Dialog dialog;
@@ -42,8 +44,49 @@ public class trigger : MonoBehaviour
         dialogBox.gameObject.SetActive(false);  // und zurücksetzen
     }
 
+    public void rufePatient()
+    {
+        StartCoroutine(getRandomUser());
+        Debug.Log(antwort);
+    }
+
+    /**
+     * Einfacher als gedacht
+     */
+    IEnumerator getRandomUser()
+    {
+        UnityWebRequest aufruf = new UnityWebRequest("http://randomuser.me/api");  //Quasi ein GET
+        //UnityWebRequest aufruf = new UnityWebRequest("http://games.informatik.hs-mannheim.de:8080/rest/schach/spiel/getBelegung/0");  //Quasi ein GET
+
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+        }
+        else
+        {
+            antwort = aufruf.downloadHandler.text;
+        }
+    }
+
+
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (!patientDa)
+            {
+                rufePatient();
+            }
+            else
+            {
+                Debug.Log("Patient bereits vorhanden");
+                Debug.Log(antwort);
+            }
+        }
 
         if (hovered)
         {
@@ -66,11 +109,11 @@ public class trigger : MonoBehaviour
                 //Dialog startet falls noch nicht gestartet
                 if (!dialogGestartet)
                 {
-                    
+
                     FindObjectOfType<DialogManager>().StarteDialog(dialog);
                     dialogGestartet = true;
                 }
-                
+
 
             }
         }

@@ -84,10 +84,10 @@ public class BackendAnbindung : MonoBehaviour {
     {
     }
 
-    public void randomUser()
+    public string randomUser()
     {
         StartCoroutine(getRandomUser());
-
+        return antwort;
     }
 
     /**
@@ -95,8 +95,8 @@ public class BackendAnbindung : MonoBehaviour {
      */
     IEnumerator getRandomUser()
     {
-        //UnityWebRequest aufruf = new UnityWebRequest("http://randomuser.me/api");  //Quasi ein GET
-        UnityWebRequest aufruf = new UnityWebRequest("http://games.informatik.hs-mannheim.de:8080/rest/schach/spiel/getBelegung/0");  //Quasi ein GET
+        UnityWebRequest aufruf = new UnityWebRequest("http://randomuser.me/api");  //Quasi ein GET
+        //UnityWebRequest aufruf = new UnityWebRequest("http://games.informatik.hs-mannheim.de:8080/rest/schach/spiel/getBelegung/0");  //Quasi ein GET
 
         aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
         yield return aufruf.SendWebRequest();
@@ -107,7 +107,7 @@ public class BackendAnbindung : MonoBehaviour {
         } else
         {
             antwort = aufruf.downloadHandler.text;
-            Debug.Log(antwort);     //Test um die Antwort zu sehen
+            //Debug.Log(antwort);     //Test um die Antwort zu sehen
 
            // testObjekt = JsonUtility.FromJson<TestClass>(antwort);  //Erklärung siehe Beispiel unten
 

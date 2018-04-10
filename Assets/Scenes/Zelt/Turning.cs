@@ -9,7 +9,7 @@ public class Turning : MonoBehaviour {
     public Rigidbody rb;
 
     public float speedH = 2.0f;
-    public float mms = 2.0f;
+    public float movementSpeed = 2.0f;
 
     private float yaw = 0.0f;
 
@@ -31,13 +31,22 @@ public class Turning : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W))
         {
-            movementVector = transform.forward * mms * Time.deltaTime;
-            movementVector.y -= movementVector.y;
-            rb.transform.position += movementVector;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                movementVector = transform.forward * (movementSpeed + 4) * Time.deltaTime;
+                movementVector.y -= movementVector.y;
+                rb.transform.position += movementVector;
+            }
+            else
+            {
+                movementVector = transform.forward * movementSpeed * Time.deltaTime;
+                movementVector.y -= movementVector.y;
+                rb.transform.position += movementVector;
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
-            movementVector = transform.forward * mms * Time.deltaTime;
+            movementVector = transform.forward * movementSpeed * Time.deltaTime;
             movementVector.y -= movementVector.y;
             rb.transform.position -= movementVector;
         }
