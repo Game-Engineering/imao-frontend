@@ -282,7 +282,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\Hauptmenu\BackendAnbindungHauptmenu.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindung.cs" />
+    <Compile Include="Assets\Scenes\Zelt\BackendAnbindungToInterface.cs" />
     <Compile Include="Assets\Scenes\Zelt\callPatient.cs" />
     <Compile Include="Assets\Scenes\Zelt\Dialog\AnamneseManager.cs" />
     <Compile Include="Assets\Scenes\Zelt\Dialog\Dialog.cs" />

@@ -27,13 +27,7 @@ public class AnamneseManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        begruessung.ID = 0;
-        begruessung.text = "Hallo, mein Name ist"
-
-
-
-        beenden.ID = 24;
-        beenden.text = "Warten Sie bitte kurz.";
+        
 	}
 
     public void StarteDialog(Dialog dialog)

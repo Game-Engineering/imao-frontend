@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System;
 
 public class trigger : MonoBehaviour
 {
@@ -17,9 +18,11 @@ public class trigger : MonoBehaviour
     private bool dialogGestartet;
     private string antwort;
     private bool patientDa = false;
-
+    private string url = "localhost:8080/imao/api/spiel/";
 
     public Dialog dialog;
+
+    
 
     private void Start()
     {
@@ -46,18 +49,13 @@ public class trigger : MonoBehaviour
 
     public void rufePatient()
     {
-        StartCoroutine(getRandomUser());
+        StartCoroutine(getPatient());
         Debug.Log(antwort);
     }
 
-    /**
-     * Einfacher als gedacht
-     */
-    IEnumerator getRandomUser()
+    IEnumerator getPatient()
     {
-        UnityWebRequest aufruf = new UnityWebRequest("http://randomuser.me/api");  //Quasi ein GET
-        //UnityWebRequest aufruf = new UnityWebRequest("http://games.informatik.hs-mannheim.de:8080/rest/schach/spiel/getBelegung/0");  //Quasi ein GET
-
+        UnityWebRequest aufruf = new UnityWebRequest(url + "getPatient");
         aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
         yield return aufruf.SendWebRequest();
 
