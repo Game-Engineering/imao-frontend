@@ -282,21 +282,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Hauptmenu\BackendAnbindungHauptmenu.cs" />
+    <Compile Include="Assets\DATEN\Konstanten.cs" />
+    <Compile Include="Assets\DATEN\Objekte.cs" />
+    <Compile Include="Assets\DATEN\ObjekteManager.cs" />
+    <Compile Include="Assets\DATEN\Variablen.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindung.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindungToInterface.cs" />
     <Compile Include="Assets\Scenes\Zelt\callPatient.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Dialog\AnamneseManager.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Dialog\Dialog.cs" />
     <Compile Include="Assets\Scenes\Zelt\Dialog\DialogManager.cs" />
-    <Compile Include="Assets\Scenes\Zelt\Dialoge.cs" />
+    <Compile Include="Assets\Scenes\Zelt\Dialog\DialogTrigger.cs" />
     <Compile Include="Assets\Scenes\Zelt\PatientenVariablen.cs" />
+    <Compile Include="Assets\Scenes\Zelt\RundenManager.cs" />
     <Compile Include="Assets\Scenes\Zelt\trigger.cs" />
     <Compile Include="Assets\Scenes\Zelt\Turning.cs" />
-    <Compile Include="Assets\Scenes\ZeltBackup\CamMove.cs" />
-    <Compile Include="Assets\Scenes\ZeltBackup\Hotkeys.cs" />
-    <Compile Include="Assets\Scenes\ZeltBackup\Movement.cs" />
-    <Compile Include="Assets\Scenes\ZeltBackup\Tablet\MouseEventsT.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\EingabeUeberpruefung.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\SzenenManager.cs" />
     <Compile Include="Assets\Scripts\IMAO.cs" />
@@ -314,11 +312,7 @@
     <Compile Include="Assets\Scripts\RestClientLib\model\NestedResults.cs" />
     <Compile Include="Assets\Scripts\RestClientLib\RestClient.cs" />
     <Compile Include="Assets\Scripts\RestServer.cs" />
-    <Compile Include="Assets\Serveranbindung\Backend.cs" />
-    <Compile Include="Assets\Serveranbindung\BackendStub.cs" />
     <Compile Include="Assets\Serveranbindung\IBackend.cs" />
-    <Compile Include="Assets\Serveranbindung\Konstante.cs" />
-    <Compile Include="Assets\Serveranbindung\ParserXml.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

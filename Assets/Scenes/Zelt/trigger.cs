@@ -20,7 +20,6 @@ public class trigger : MonoBehaviour
     private bool patientDa = false;
     private string url = "localhost:8080/imao/api/spiel/";
 
-    public Dialog dialog;
 
     
 
@@ -86,7 +85,7 @@ public class trigger : MonoBehaviour
             }
         }
 
-        if (hovered)
+  /*      if (hovered)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -115,8 +114,6 @@ public class trigger : MonoBehaviour
 
             }
         }
+        */
     }
-
-
-
 }

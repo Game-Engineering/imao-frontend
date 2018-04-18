@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turning : MonoBehaviour {
+public class Turning : MonoBehaviour
+{
 
     private Vector3 movementVector;
 
@@ -15,51 +16,82 @@ public class Turning : MonoBehaviour {
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         Cursor.lockState = CursorLockMode.Locked;
+        Variablen.kameraFest = true;
 
     }
 
     // Update is called once per frame
-    void FixedUpdate () {
+    void FixedUpdate()
+    {
 
-        yaw += speedH * Input.GetAxis("Mouse X"); //Horizontale Mausbewegung in Kamerabewegung
-
-        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
-
-        if (Input.GetKey(KeyCode.W))
+        if (Variablen.kameraFest)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            yaw += speedH * Input.GetAxis("Mouse X"); //Horizontale Mausbewegung in Kamerabewegung
+
+            transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+
+            if (Input.GetKey(KeyCode.W))
             {
-                movementVector = transform.forward * (movementSpeed + 4) * Time.deltaTime;
-                movementVector.y -= movementVector.y;
-                rb.transform.position += movementVector;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    movementVector = transform.forward * (movementSpeed + 4) * Time.deltaTime;
+                    movementVector.y -= movementVector.y;
+                    rb.transform.position += movementVector;
+                }
+                else
+                {
+                    movementVector = transform.forward * movementSpeed * Time.deltaTime;
+                    movementVector.y -= movementVector.y;
+                    rb.transform.position += movementVector;
+                }
             }
-            else
+            if (Input.GetKey(KeyCode.S))
             {
                 movementVector = transform.forward * movementSpeed * Time.deltaTime;
                 movementVector.y -= movementVector.y;
-                rb.transform.position += movementVector;
+                rb.transform.position -= movementVector;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.transform.position -= transform.right * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.transform.position += transform.right * Time.deltaTime;
             }
         }
-        if (Input.GetKey(KeyCode.S))
+
+
+        /*
+         * Mauszeiger zentrieren bzw dezentrieren um auswahl zu erschaffen
+        */
+        if ((Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt) || Input.GetKeyDown(KeyCode.Escape)) && !Variablen.dialogOffen)
         {
-            movementVector = transform.forward * movementSpeed * Time.deltaTime;
-            movementVector.y -= movementVector.y;
-            rb.transform.position -= movementVector;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.transform.position -= transform.right * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.transform.position += transform.right * Time.deltaTime;
+            mouseLock();
         }
 
 
+    }
 
+    void mouseLock()
+    {
+        if (Variablen.kameraFest)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Variablen.kameraFest = false;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Locked;
+            Variablen.kameraFest = true;
+        }
     }
 }

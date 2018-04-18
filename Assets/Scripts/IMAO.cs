@@ -24,7 +24,7 @@ public class IMAO
     private IMAO() { }
     #endregion
 
-    
+
     public void Beende()
     {
         Application.Quit();
