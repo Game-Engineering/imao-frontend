@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogTrigger : MonoBehaviour
 {
 
-    public Canvas can;
+    // public Canvas can;
 
     private void OnTriggerEnter(Collider other)
     {
