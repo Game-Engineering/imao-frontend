@@ -138,16 +138,18 @@ public class callPatient : MonoBehaviour
         m2_Material = clone.transform.Find("Kopf").GetComponent<MeshRenderer>().material;
         m3_Material = clone.transform.Find("Ohren").GetComponent<MeshRenderer>().material;
 
-        Debug.Log("Erscheinungs ID: " + Variablen.momentanerPatient.erscheinungID);
+        //Debug.Log("Erscheinungs ID: " + Variablen.momentanerPatient.erscheinungID);
 
-        if(Variablen.momentanerPatient.erscheinungID == 1)
+        String erscheinung = Variablen.momentanerPatient.erscheinungID + "";
+
+        if(erscheinung[2] == '1')
         {
             m1_Material.color = new Color32(255, 224, 189, 255);
             m2_Material.color = new Color32(255, 224, 189, 255);
             m3_Material.color = new Color32(255, 224, 189, 255);
 
             Debug.Log("Farbe: NORMAL");
-        }else if (Variablen.momentanerPatient.erscheinungID == 2)
+        }else if (erscheinung[2] == '2')
         {
             m1_Material.color = new Color32(255, 227, 159, 255);
             m2_Material.color = new Color32(255, 227, 159, 255);
@@ -155,7 +157,7 @@ public class callPatient : MonoBehaviour
 
             Debug.Log("Farbe: GELB");
         }
-        else if (Variablen.momentanerPatient.erscheinungID == 3)
+        else if (erscheinung[2] == '3')
         {
             m1_Material.color = new Color32(255, 102, 102, 255);
             m2_Material.color = new Color32(255, 102, 102, 255);
