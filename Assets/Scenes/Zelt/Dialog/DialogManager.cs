@@ -150,7 +150,7 @@ public class DialogManager : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O) && Variablen.patientVorhanden && Variablen.patientInReichweite)
+        if (Input.GetKeyDown(KeyCode.F) && Variablen.patientVorhanden && Variablen.patientInReichweite)
         {
             starteDialog();
             can.gameObject.SetActive(true);
