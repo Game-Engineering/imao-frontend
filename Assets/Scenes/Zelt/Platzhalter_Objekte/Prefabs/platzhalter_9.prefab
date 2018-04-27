@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65620702932712192}
   - component: {fileID: 23121956585423866}
   - component: {fileID: 54102027166538152}
+  - component: {fileID: 114818166940768950}
   m_Layer: 0
   m_Name: platzhalter_9
   m_TagString: Untagged
@@ -111,3 +112,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114818166940768950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150799868400380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e046c696c3ce1842888e018857bb4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wegpunkteKommen:
+  - {fileID: 4260462707473684, guid: 435df89d0bae3a04f9a4833590f43c19, type: 2}
+  - {fileID: 4444090871594898, guid: 8c3ce3e5284fbd54082f71c8541bc7b7, type: 2}
+  - {fileID: 4969534319717162, guid: ecbfad76f588b9c499d4c1c58fd925ec, type: 2}
+  wegpunkteGehen:
+  - {fileID: 4939779691869038, guid: 5bb8b51008246bf4c92fb7e0dbd4d3e2, type: 2}
+  - {fileID: 4502039849463460, guid: d5759eb5d3306224fb47f5b0d9f5af65, type: 2}
+  - {fileID: 4870888207097656, guid: 6d8634b8136bed44388dd1895a637454, type: 2}

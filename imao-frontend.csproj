@@ -289,6 +289,7 @@
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindung.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindungToInterface.cs" />
     <Compile Include="Assets\Scenes\Zelt\callPatient.cs" />
+    <Compile Include="Assets\Scenes\Zelt\Diagnose\StelleDiagnose.cs" />
     <Compile Include="Assets\Scenes\Zelt\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scenes\Zelt\Dialog\DialogTrigger.cs" />
     <Compile Include="Assets\Scenes\Zelt\move.cs" />
@@ -296,10 +297,12 @@
     <Compile Include="Assets\Scenes\Zelt\RundenManager.cs" />
     <Compile Include="Assets\Scenes\Zelt\trigger.cs" />
     <Compile Include="Assets\Scenes\Zelt\Turning.cs" />
+    <Compile Include="Assets\Scripts\GUI Scripts\Disabler.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\EingabeUeberpruefung.cs" />
     <Compile Include="Assets\Scripts\Hauptmenü\SzenenManager.cs" />
     <Compile Include="Assets\Scripts\IMAO.cs" />
     <Compile Include="Assets\Scripts\movement\Kamerabewegung.cs" />
+    <Compile Include="Assets\Scripts\movement\Patientenbewegung.cs" />
     <Compile Include="Assets\Scripts\RestClientLib\helpers\JsonHelper.cs" />
     <Compile Include="Assets\Scripts\RestClientLib\helpers\ReflectionHelper.cs" />
     <Compile Include="Assets\Scripts\RestClientLib\helpers\SignatureHelper.cs" />

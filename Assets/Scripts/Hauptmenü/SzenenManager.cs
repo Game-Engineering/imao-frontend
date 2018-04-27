@@ -21,14 +21,14 @@ public class SzenenManager : MonoBehaviour
 
     public void LadeZelt()
     {
-        StartCoroutine(sendeRequestSzene("start/arzt/Max/Mustermann"));
+        StartCoroutine(sendeRequestSzene("start/arzt/Max/Mustermann/weiblich"));
         //   StartCoroutine(sendeRequestRunde("neueRunde"));
         IMAO.Instanz.LadeZelt();
     }
 
     public void LadeWirtschaft()
     {
-        StartCoroutine(sendeRequestSzene("start/manager/Max/Mustermann"));
+        StartCoroutine(sendeRequestSzene("start/manager/Max/Mustermann/weiblich"));
         //  StartCoroutine(sendeRequestRunde("neueRunde"));
         IMAO.Instanz.LadeWirtschaft();
     }

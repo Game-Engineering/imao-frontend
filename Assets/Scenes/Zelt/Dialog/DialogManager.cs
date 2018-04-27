@@ -16,8 +16,15 @@ public class DialogManager : MonoBehaviour
 
     public void starteDialog()
     {
-        Debug.Log(Variablen.momentanerPatient.ID);
-        StartCoroutine(getDialog("getAnamnese/" + Variablen.momentanerPatient.ID));
+        if (Variablen.patientInZelt)
+        {
+            Debug.Log(Variablen.momentanerPatient.ID);
+            StartCoroutine(getDialog("getAnamnese/" + Variablen.momentanerPatient.ID));
+
+            can.gameObject.SetActive(true);
+
+            Variablen.dialogOffen = true;
+        }
     }
 
     public void fuehreDialogFort()
@@ -27,6 +34,7 @@ public class DialogManager : MonoBehaviour
 
     public void blutbildErstellen()
     {
+        
         StartCoroutine(getBlutbild("getBlutbild/" + Variablen.momentanerPatient.ID));
     }
 
@@ -71,9 +79,11 @@ public class DialogManager : MonoBehaviour
                 can.gameObject.SetActive(false);
 
                 Variablen.dialogOffen = false;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Variablen.kameraFest = true;
+            }
+            if (Variablen.anamnese.option.Equals("blutbild"))
+            {
+                GameObject.Find("ZeigeBlutbild").GetComponent<Button>().interactable = true;
+
             }
             counter = 0;
         }
@@ -147,23 +157,13 @@ public class DialogManager : MonoBehaviour
 
     public GameObject a;
 
-   
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && Variablen.patientVorhanden && Variablen.patientInReichweite)
+        if (Input.GetKeyDown(KeyCode.F) && Variablen.patientInZelt)
         {
             starteDialog();
-            can.gameObject.SetActive(true);
-
-            Variablen.dialogOffen = true;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            Variablen.kameraFest = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.B) && Variablen.anamnese.option.Equals("blutbild"))
-        {
-            blutbildErstellen();
-        }
     }
 }

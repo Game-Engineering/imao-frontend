@@ -11,7 +11,8 @@ public class RundenManager : MonoBehaviour
 
     public void starteNeueRunde()
     {
-        StartCoroutine(sendeRequestRunde("neueRunde"));
+        if (!Variablen.patientVorhanden && !Variablen.patientInZelt && !Variablen.patientGeht)
+            StartCoroutine(sendeRequestRunde("neueRunde"));
     }
 
 
@@ -33,6 +34,8 @@ public class RundenManager : MonoBehaviour
             GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.runde.runde + "";
             GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.runde.wartendePatienten + "";
             GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.runde.ruf + "";
+            GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
+
         }
     }
 

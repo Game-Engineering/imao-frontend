@@ -9,6 +9,7 @@ using System;
 
 public class Variablen
 {
+    //Anamnese
     public static string spieler;
     public static Dialog anamnese = new Dialog();
     public static string clickedButton;
@@ -16,9 +17,16 @@ public class Variablen
     public static bool kameraFest = true;
     public static bool dialogOffen = false;
 
+    //Diagnose
+    public static string krankheitDiagnose;
+    public static DiagnoseErgebnis diagnoseErgebnis;
+
     //Alles was den Patienten betrifft
     public static bool patientVorhanden = false;
+    public static bool patientGeht = false;
+    public static bool patientInZelt = false;
     public static bool patientInReichweite = false;
+    public static bool blutbildEinsehbar = false;
     public static Patient momentanerPatient = new Patient();
 
     public static Blutbild blutbild = new Blutbild();
@@ -68,4 +76,12 @@ public class Blutbild
     public double MCH;
     public double MCHC;
     public double MCV;
+}
+
+[Serializable]
+public class DiagnoseErgebnis
+{
+    public int budget;
+    public string nachricht;
+    public int ruf;
 }
