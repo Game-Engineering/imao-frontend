@@ -88,10 +88,11 @@ public class callPatient : MonoBehaviour
             Debug.Log(JsonUtility.ToJson(Variablen.momentanerPatient));
 
             erstellePatient();
+            Variablen.patientVorhanden = true;
             Debug.Log("Patient wird erstellt ...");
             GameObject.Find("StarteDialog").GetComponent<UnityEngine.UI.Button>().interactable = true;
             GameObject.Find("StelleDiagnose").GetComponent<UnityEngine.UI.Button>().interactable = true;
-            GameObject.Find("RufePatient").GetComponent<UnityEngine.UI.Button>().interactable = false;
+            GameObject.Find("RufePatienten").GetComponent<UnityEngine.UI.Button>().interactable = false;
             GameObject.Find("NeueRunde").GetComponent<UnityEngine.UI.Button>().interactable = false;
 
         }

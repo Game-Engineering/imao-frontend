@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour
 
     public Canvas can;
     public Canvas blutbild;
+    public Canvas diagnose;
 
     private string antwort;
     private int counter = 0;
@@ -21,6 +22,7 @@ public class DialogManager : MonoBehaviour
             Debug.Log(Variablen.momentanerPatient.ID);
             StartCoroutine(getDialog("getAnamnese/" + Variablen.momentanerPatient.ID));
 
+            diagnose.gameObject.SetActive(false);
             can.gameObject.SetActive(true);
 
             Variablen.dialogOffen = true;
@@ -34,7 +36,7 @@ public class DialogManager : MonoBehaviour
 
     public void blutbildErstellen()
     {
-        
+
         StartCoroutine(getBlutbild("getBlutbild/" + Variablen.momentanerPatient.ID));
     }
 

@@ -45,7 +45,6 @@ public class Patientenbewegung : MonoBehaviour
 
             if (transform.localRotation != wegpunkteKommen[momentanerWegpunkt - 1].localRotation && rotationAn)
             {
-                Debug.Log(transform.localRotation + "Rotating" + wegpunkteKommen[momentanerWegpunkt - 1].localRotation);
                 Quaternion rotation = Quaternion.RotateTowards(transform.localRotation, wegpunkteKommen[momentanerWegpunkt - 1].localRotation, 50 * Time.deltaTime);
                 GetComponent<Rigidbody>().MoveRotation(rotation);
 
@@ -86,7 +85,6 @@ public class Patientenbewegung : MonoBehaviour
 
             if (transform.localRotation != wegpunkteGehen[momentanerWegpunkt - 1].localRotation && rotationAn)
             {
-                Debug.Log(transform.localRotation + "Rotating" + wegpunkteGehen[momentanerWegpunkt - 1].localRotation);
                 Quaternion rotation = Quaternion.RotateTowards(transform.localRotation, wegpunkteGehen[momentanerWegpunkt - 1].localRotation, 50 * Time.deltaTime);
                 GetComponent<Rigidbody>().MoveRotation(rotation);
 

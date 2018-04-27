@@ -8,20 +8,33 @@ public class StelleDiagnose : MonoBehaviour
 {
 
     public Canvas can;
+    public Canvas dialog;
 
     private string antwort;
-
+    private GameObject auswahl;
+    private GameObject ergebnis;
+    private bool ersteDiagnose = true;
 
     public void oeffneDiagnose()
     {
-        GameObject.Find("BackgroundDiagnose").SetActive(true);
-        GameObject.Find("DiagnoseErgebnis").SetActive(false);
+        dialog.gameObject.SetActive(false);
         can.gameObject.SetActive(true);
+        if (ersteDiagnose)
+        {
+            auswahl = GameObject.Find("BackgroundDiagnose");
+            ergebnis = GameObject.Find("DiagnoseErgebnis");
+            Debug.Log(auswahl);
+            Debug.Log(ergebnis);
+            ersteDiagnose = false;
+        }
+
+        auswahl.SetActive(true);
+        ergebnis.SetActive(false);
     }
 
     public void stelleDiagnose()
     {
-        StartCoroutine(getDiagnose("getDiagnose/" + Variablen.momentanerPatient.ID + "/" + Variablen.krankheitDiagnose));
+        StartCoroutine(getDiagnose("diagnose/" + Variablen.momentanerPatient.ID + "/" + Variablen.krankheitDiagnose));
     }
 
     IEnumerator getDiagnose(string schnittstelle)
@@ -39,17 +52,18 @@ public class StelleDiagnose : MonoBehaviour
             antwort = aufruf.downloadHandler.text;
             Variablen.diagnoseErgebnis = JsonUtility.FromJson<DiagnoseErgebnis>(antwort);
             zeigeErgebnis();
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             Variablen.patientGeht = true;
             Variablen.patientInZelt = false;
+            can.gameObject.SetActive(false);
         }
     }
 
     public void zeigeErgebnis()
     {
-        can.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
-        GameObject.Find("BackgroundDiagnose").SetActive(false);
-        GameObject.Find("DiagnoseErgebnis").SetActive(true);
+        ergebnis.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
+        auswahl.SetActive(false);
+        ergebnis.SetActive(true);
 
         GameObject.Find("StelleDiagnose").GetComponent<Button>().interactable = false;
         GameObject.Find("ZeigeBlutbild").GetComponent<Button>().interactable = false;
@@ -59,7 +73,7 @@ public class StelleDiagnose : MonoBehaviour
 
         if (Variablen.runde.wartendePatienten > 0)
         {
-            GameObject.Find("RufePatienten").GetComponent<Button>().interactable = false;
+            GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
         }
     }
 

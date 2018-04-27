@@ -22,6 +22,8 @@ public class SzenenManager : MonoBehaviour
     public void LadeZelt()
     {
         StartCoroutine(sendeRequestSzene("start/arzt/Max/Mustermann/weiblich"));
+        Konstanten.URL += "medizin/";
+        Debug.Log(Konstanten.URL);
         //   StartCoroutine(sendeRequestRunde("neueRunde"));
         IMAO.Instanz.LadeZelt();
     }
@@ -29,6 +31,8 @@ public class SzenenManager : MonoBehaviour
     public void LadeWirtschaft()
     {
         StartCoroutine(sendeRequestSzene("start/manager/Max/Mustermann/weiblich"));
+        Konstanten.URL += "wirtschaft/";
+        Debug.Log(Konstanten.URL);
         //  StartCoroutine(sendeRequestRunde("neueRunde"));
         IMAO.Instanz.LadeWirtschaft();
     }
