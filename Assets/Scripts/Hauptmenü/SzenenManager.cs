@@ -9,6 +9,14 @@ using System;
 /// </summary>
 public class SzenenManager : MonoBehaviour
 {
+    public UnityEngine.UI.Text input;
+
+    public void setzeURL()
+    {
+        Konstanten.URL = input.text + "/imao/api/spiel/";
+        Debug.Log(Konstanten.URL);
+    }
+
     public void Beende()
     {
         IMAO.Instanz.Beende();
