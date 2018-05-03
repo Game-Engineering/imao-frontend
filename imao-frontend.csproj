@@ -286,6 +286,10 @@
     <Compile Include="Assets\DATEN\Objekte.cs" />
     <Compile Include="Assets\DATEN\ObjekteManager.cs" />
     <Compile Include="Assets\DATEN\Variablen.cs" />
+    <Compile Include="Assets\Scenes\Wirtschaft\Scipts\Berichtscript.cs" />
+    <Compile Include="Assets\Scenes\Wirtschaft\Scipts\InterviewManager.cs" />
+    <Compile Include="Assets\Scenes\Wirtschaft\Scipts\Mails.cs" />
+    <Compile Include="Assets\Scenes\Wirtschaft\Scipts\Pressekonferenz.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindung.cs" />
     <Compile Include="Assets\Scenes\Zelt\BackendAnbindungToInterface.cs" />
     <Compile Include="Assets\Scenes\Zelt\callPatient.cs" />
