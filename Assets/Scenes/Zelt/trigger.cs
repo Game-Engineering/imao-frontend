@@ -1,7 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.
-Generic;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using System;
 
 public class trigger : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class trigger : MonoBehaviour
     private bool hovered = false;
     private UnityEngine.UI.Text clicker;
     private bool dialogGestartet;
+    private string antwort;
+    private bool patientDa = false;
+    private string url = "localhost:8080/imao/api/spiel/";
 
 
-    public Dialog dialog;
+    
 
     private void Start()
     {
@@ -42,10 +46,46 @@ public class trigger : MonoBehaviour
         dialogBox.gameObject.SetActive(false);  // und zurücksetzen
     }
 
+    public void rufePatient()
+    {
+        StartCoroutine(getPatient());
+        Debug.Log(antwort);
+    }
+
+    IEnumerator getPatient()
+    {
+        UnityWebRequest aufruf = new UnityWebRequest(url + "getPatient");
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+        }
+        else
+        {
+            antwort = aufruf.downloadHandler.text;
+        }
+    }
+
+
     private void Update()
     {
 
-        if (hovered)
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (!patientDa)
+            {
+                rufePatient();
+            }
+            else
+            {
+                Debug.Log("Patient bereits vorhanden");
+                Debug.Log(antwort);
+            }
+        }
+
+  /*      if (hovered)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -66,16 +106,14 @@ public class trigger : MonoBehaviour
                 //Dialog startet falls noch nicht gestartet
                 if (!dialogGestartet)
                 {
-                    
+
                     FindObjectOfType<DialogManager>().StarteDialog(dialog);
                     dialogGestartet = true;
                 }
-                
+
 
             }
         }
+        */
     }
-
-
-
 }

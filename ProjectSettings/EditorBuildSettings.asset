@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wirtschaft/Wirtschaft.unity
     guid: 697a7db0a6a6b14458c0db193b073279
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Zelt/Zelt.unity
-    guid: 1f9925d824fdd294dab3de64c5c5e007
+    path: Assets/Scenes/Zelt/ZeltTest.unity
+    guid: 8e124d258eb421f448dd988255f0ed71
