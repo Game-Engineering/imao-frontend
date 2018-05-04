@@ -4,6 +4,7 @@ Assets/Scenes/Hauptmenu/Hauptmenü.unity
 Assets/Scenes/Wirtschaft/Wirtschaft.unity
 Assets/Scenes/Zelt/ZeltTest.unity
 SceneListEnd?
+f0e14c8e4ab440533caee0da4554434f Assembly-CSharp.dll:.Pressekonferenz
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -120,6 +121,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 afaae5245d8f14b684695a9aafcbdd36 Assembly-CSharp.dll:.Turning
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackendAnbindung
+416829a077ac65189e047b23dedce7e9 Assembly-CSharp.dll:.Mails
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Disabler
 d1684a1b9a62651fea77530b2ff95596 Assembly-CSharp.dll:.callPatient
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DialogTrigger
@@ -145,15 +147,17 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
-81ec72ce7b1a82368c23c89c61eaf1a9 Assembly-CSharp.dll:.DialogManager
+6c0ef0d1c5995433d69cded763fb9b5b Assembly-CSharp.dll:.DialogManager
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+32dab2682fb321f8f3047d50eaa6f706 Assembly-CSharp.dll:.InterviewManager
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 65b6d6db8dddb87fbde3750a287b138a Assembly-CSharp.dll:.RundenManager
 815c25c95301206468d9b2c9a4b9d528 Assembly-CSharp.dll:.Kamerabewegung
-4452df0fc6b7c833aa944aa52d2bd658 Assembly-CSharp.dll:.StelleDiagnose
+0b309ff6a2a031c02249f85364ee6f36 Assembly-CSharp.dll:.StelleDiagnose
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackendAnbindungToInterface
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SzenenManager
+d3da5bc117d7e6d050e7ecf5e418ed19 Assembly-CSharp.dll:.SzenenManager
+068869677ca4ab9aeee551feb0c7c470 Assembly-CSharp.dll:.Berichtscript
