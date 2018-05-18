@@ -11645,7 +11645,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 857973436}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &857973438
 Behaviour:
   m_ObjectHideFlags: 0
@@ -11878,6 +11878,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 873466558}
   m_Mesh: {fileID: 4300334, guid: e33a2834bb5da2242b9c66e662e3d717, type: 3}
+--- !u!4 &882973904 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4444090871594898, guid: 8c3ce3e5284fbd54082f71c8541bc7b7,
+    type: 2}
+  m_PrefabInternal: {fileID: 2042125564}
 --- !u!1 &883185406
 GameObject:
   m_ObjectHideFlags: 0
@@ -14552,6 +14557,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103940838}
   m_Mesh: {fileID: 4300060, guid: e33a2834bb5da2242b9c66e662e3d717, type: 3}
+--- !u!4 &1105322228 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4870888207097656, guid: 6d8634b8136bed44388dd1895a637454,
+    type: 2}
+  m_PrefabInternal: {fileID: 918275357}
 --- !u!1 &1105605499
 GameObject:
   m_ObjectHideFlags: 0
@@ -17287,6 +17297,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1285612622}
   m_Mesh: {fileID: 4300054, guid: e33a2834bb5da2242b9c66e662e3d717, type: 3}
+--- !u!4 &1285922958 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4939779691869038, guid: 5bb8b51008246bf4c92fb7e0dbd4d3e2,
+    type: 2}
+  m_PrefabInternal: {fileID: 502909639}
 --- !u!1 &1290535255
 GameObject:
   m_ObjectHideFlags: 0
@@ -17360,6 +17375,82 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1290535255}
   m_Mesh: {fileID: 4300448, guid: e33a2834bb5da2242b9c66e662e3d717, type: 3}
+--- !u!1001 &1291417026
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817447535637986, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteKommen.Array.data[0]
+      value: 
+      objectReference: {fileID: 1719580407}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteKommen.Array.data[1]
+      value: 
+      objectReference: {fileID: 882973904}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteKommen.Array.data[2]
+      value: 
+      objectReference: {fileID: 2055834902}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteGehen.Array.data[0]
+      value: 
+      objectReference: {fileID: 1285922958}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteGehen.Array.data[1]
+      value: 
+      objectReference: {fileID: 1702039997}
+    - target: {fileID: 114029842329042088, guid: 6ff4dd5c61498a841b6f908992f33c10,
+        type: 2}
+      propertyPath: wegpunkteGehen.Array.data[2]
+      value: 
+      objectReference: {fileID: 1105322228}
+    - target: {fileID: 1831086415149618, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6ff4dd5c61498a841b6f908992f33c10, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1291783336
 GameObject:
   m_ObjectHideFlags: 0
@@ -24565,6 +24656,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1700772868}
   m_Mesh: {fileID: 4300476, guid: e33a2834bb5da2242b9c66e662e3d717, type: 3}
+--- !u!4 &1702039997 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4502039849463460, guid: d5759eb5d3306224fb47f5b0d9f5af65,
+    type: 2}
+  m_PrefabInternal: {fileID: 1022199900}
 --- !u!1 &1710449936
 GameObject:
   m_ObjectHideFlags: 0
@@ -28681,6 +28777,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c3ce3e5284fbd54082f71c8541bc7b7, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2055834902 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4969534319717162, guid: ecbfad76f588b9c499d4c1c58fd925ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 651921507}
 --- !u!1 &2057268025
 GameObject:
   m_ObjectHideFlags: 0

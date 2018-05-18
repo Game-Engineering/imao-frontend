@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imao-frontend", "imao-frontend.csproj", "{CA806326-1E0B-D26F-6949-30C0B206A040}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imao-frontend", "Assembly-CSharp.csproj", "{B941F92F-0FA8-7011-955C-58BDA0F01967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CA806326-1E0B-D26F-6949-30C0B206A040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA806326-1E0B-D26F-6949-30C0B206A040}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA806326-1E0B-D26F-6949-30C0B206A040}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA806326-1E0B-D26F-6949-30C0B206A040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B941F92F-0FA8-7011-955C-58BDA0F01967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B941F92F-0FA8-7011-955C-58BDA0F01967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B941F92F-0FA8-7011-955C-58BDA0F01967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B941F92F-0FA8-7011-955C-58BDA0F01967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
