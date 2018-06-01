@@ -787,9 +787,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4715743826781328}
   - component: {fileID: 95950154697933238}
-  - component: {fileID: 114026968310156904}
   - component: {fileID: 54131890119489904}
   - component: {fileID: 65035062273381552}
+  - component: {fileID: 114465118478687632}
   m_Layer: 0
   m_Name: zombiegirl_w_kurniawan_7
   m_TagString: Untagged
@@ -2008,7 +2008,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114026968310156904
+--- !u!114 &114465118478687632
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2016,17 +2016,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803319020690376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e046c696c3ce1842888e018857bb4b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 83897e79a7b5d0e4ebfc29d28d7707ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wegpunkteKommen:
-  - {fileID: 4260462707473684, guid: 435df89d0bae3a04f9a4833590f43c19, type: 2}
-  - {fileID: 4444090871594898, guid: 8c3ce3e5284fbd54082f71c8541bc7b7, type: 2}
-  - {fileID: 4969534319717162, guid: ecbfad76f588b9c499d4c1c58fd925ec, type: 2}
+  - {fileID: 4742628062243054, guid: 435df89d0bae3a04f9a4833590f43c19, type: 2}
+  - {fileID: 4215872296246246, guid: 8c3ce3e5284fbd54082f71c8541bc7b7, type: 2}
+  - {fileID: 4193295710502936, guid: ecbfad76f588b9c499d4c1c58fd925ec, type: 2}
   wegpunkteGehen:
-  - {fileID: 4939779691869038, guid: 5bb8b51008246bf4c92fb7e0dbd4d3e2, type: 2}
-  - {fileID: 4502039849463460, guid: d5759eb5d3306224fb47f5b0d9f5af65, type: 2}
-  - {fileID: 4870888207097656, guid: 6d8634b8136bed44388dd1895a637454, type: 2}
+  - {fileID: 4180236056396550, guid: 5bb8b51008246bf4c92fb7e0dbd4d3e2, type: 2}
+  - {fileID: 4433416281724772, guid: d5759eb5d3306224fb47f5b0d9f5af65, type: 2}
+  - {fileID: 4731718855269472, guid: 6d8634b8136bed44388dd1895a637454, type: 2}
 --- !u!137 &137080062863840498
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
