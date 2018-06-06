@@ -100,6 +100,7 @@ public class InterviewManager : MonoBehaviour
             else
             {
                 can.GetComponentInChildren<Text>().text = "Danke, dass Sie sich die Zeit genommen haben";
+                StartCoroutine("beendeInterview");
                 blende();
             }
 
@@ -242,6 +243,13 @@ public class InterviewManager : MonoBehaviour
             Variablen.partnerAnwesend = true;
         }
 
+    }
+
+    IEnumerator beendeInterview()
+    {
+        //hier irgendwie aufstehen lassen
+        yield return new WaitForSeconds(3);
+        blende();
     }
 
     IEnumerator startInterviewBlende()
