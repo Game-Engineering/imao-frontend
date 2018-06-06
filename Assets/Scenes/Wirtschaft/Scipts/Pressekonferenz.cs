@@ -31,7 +31,8 @@ public class Pressekonferenz : MonoBehaviour
         {
             antwort = aufruf.downloadHandler.text;
             text.text = antwort; //muss noch JSONObjekt erhalten
-            yield return new WaitForSeconds(3);
+            background.SetActive(true);
+            yield return new WaitForSeconds(4);
             background.SetActive(false);
         }
 

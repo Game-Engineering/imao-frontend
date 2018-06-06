@@ -28,12 +28,12 @@ public class RundenManager : MonoBehaviour
         }
         else
         {
-            Variablen.runde = JsonUtility.FromJson<Runde>(aufruf.downloadHandler.text);
+            Variablen.rundeArzt = JsonUtility.FromJson<RundeArzt>(aufruf.downloadHandler.text);
 
-            GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.runde.budget + "";
-            GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.runde.runde + "";
-            GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.runde.wartendePatienten + "";
-            GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.runde.ruf + "";
+            GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.rundeArzt.budget + "";
+            GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.rundeArzt.runde + "";
+            GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+            GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.rundeArzt.ruf + "";
             GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
 
         }
@@ -41,10 +41,10 @@ public class RundenManager : MonoBehaviour
 
     private void rundeNeuladen()
     {
-        GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.runde.budget + "";
-        GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.runde.runde + "";
-        GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.runde.wartendePatienten + "";
-        GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.runde.ruf + "";
+        GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.rundeArzt.budget + "";
+        GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.rundeArzt.runde + "";
+        GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+        GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.rundeArzt.ruf + "";
     }
 
     private void Start()

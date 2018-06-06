@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: e332546dad4f6ac40be27d6ce79fce2e
-timeCreated: 1523021940
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -81,6 +79,7 @@ ModelImporter:
     4300022: hose
     9500000: //RootNode
     10800000: Sonne
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -100,6 +99,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

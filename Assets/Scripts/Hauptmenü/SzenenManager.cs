@@ -29,7 +29,9 @@ public class SzenenManager : MonoBehaviour
 
     public void LadeZelt()
     {
-        StartCoroutine(sendeRequestSzene("start/arzt/Max/Mustermann/weiblich"));
+        Variablen.arztOderWirtschaft = "arzt";
+        StartCoroutine(sendeRequestErzeuge("erzeuge/arzt/Max/Mustermann/weiblich"));
+        StartCoroutine(sendeRequestStart("start/" + Variablen.arztOderWirtschaft));
         Konstanten.URL += "medizin/";
         Debug.Log(Konstanten.URL);
         //   StartCoroutine(sendeRequestRunde("neueRunde"));
@@ -38,17 +40,39 @@ public class SzenenManager : MonoBehaviour
 
     public void LadeWirtschaft()
     {
-        StartCoroutine(sendeRequestSzene("start/manager/Max/Mustermann/weiblich"));
+        Variablen.arztOderWirtschaft = "manager";
+        StartCoroutine(sendeRequestErzeuge("erzeuge/manager/Max/Mustermann/weiblich"));
+        StartCoroutine(sendeRequestStart("start/" + Variablen.arztOderWirtschaft));
+
         Konstanten.URL += "wirtschaft/";
         Debug.Log(Konstanten.URL);
         //  StartCoroutine(sendeRequestRunde("neueRunde"));
         IMAO.Instanz.LadeWirtschaft();
     }
 
-    IEnumerator sendeRequestSzene(string schnittstelle)
+    IEnumerator sendeRequestErzeuge(string schnittstelle)
     {
         UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
         aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+            Debug.Log("Error");
+        }
+        else
+        {
+            Variablen.spieler = aufruf.downloadHandler.text;
+        }
+    }
+
+    IEnumerator sendeRequestStart(string schnittstelle)
+    {
+        UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+
         yield return aufruf.SendWebRequest();
 
         if (aufruf.isNetworkError || aufruf.isHttpError)
@@ -57,10 +81,11 @@ public class SzenenManager : MonoBehaviour
         }
         else
         {
-            Variablen.spieler = aufruf.downloadHandler.text;
+            Debug.Log("gestartet");
+
         }
     }
-
+    /*
     IEnumerator sendeRequestRunde(string schnittstelle)
     {
         UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
@@ -82,5 +107,6 @@ public class SzenenManager : MonoBehaviour
             GameObject.Find("RufWert").GetComponent<UnityEngine.UI.Text>().text = Variablen.runde.ruf + "";
         }
     }
+    */
 
 }

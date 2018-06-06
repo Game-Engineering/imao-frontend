@@ -71,7 +71,7 @@ public class StelleDiagnose : MonoBehaviour
 
         GameObject.Find("NeueRunde").GetComponent<Button>().interactable = true;
 
-        if (Variablen.runde.wartendePatienten > 0)
+        if (Variablen.rundeArzt.wartendePatienten > 0)
         {
             GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
         }

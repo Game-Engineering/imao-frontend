@@ -42,5 +42,7 @@ public class Kamerabewegung : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
+
     }
+
 }

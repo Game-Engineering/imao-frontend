@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: c4c14049ba6aae44d822bb764431de55
-timeCreated: 1524751448
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -787,6 +785,7 @@ ModelImporter:
     4300270: "W\xFCrfel_2_14"
     4300272: "W\xFCrfel_19"
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -806,6 +805,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

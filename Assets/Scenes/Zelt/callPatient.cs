@@ -101,12 +101,12 @@ public class callPatient : MonoBehaviour
 
     public void rufePatient()
     {
-        if (!Variablen.patientVorhanden && !Variablen.patientInZelt && !Variablen.patientGeht && Variablen.runde.wartendePatienten > 0)
+        if (!Variablen.patientVorhanden && !Variablen.patientInZelt && !Variablen.patientGeht && Variablen.rundeArzt.wartendePatienten > 0)
         {
             Debug.Log("Neuer Patient wird gerufen");
 
             StartCoroutine(getPatient());
-            Variablen.runde.wartendePatienten = (Variablen.runde.wartendePatienten - 1); // <-- C# hat manchmal Probleme mit ++/--
+            Variablen.rundeArzt.wartendePatienten = (Variablen.rundeArzt.wartendePatienten - 1); // <-- C# hat manchmal Probleme mit ++/--
       }
         else
         {
@@ -148,46 +148,48 @@ public class callPatient : MonoBehaviour
         * LEGACY CODE als Aufhänger
         */
 
-        ////jedes mesh einzeln ansteuern weil es mehr als 1 gibt
-        //m1_Material = clone.transform.Find("body").GetComponent<MeshRenderer>().material;
-        //m2_Material = clone.transform.Find("Kopf").GetComponent<MeshRenderer>().material;
-        //m3_Material = clone.transform.Find("Ohren").GetComponent<MeshRenderer>().material;
-
-        ////Debug.Log("Erscheinungs ID: " + Variablen.momentanerPatient.erscheinungID);
-
-        //String erscheinung = Variablen.momentanerPatient.erscheinungID + "";
-
-        //if(erscheinung[2] == '1')
-        //{
-        //    m1_Material.color = new Color32(255, 224, 189, 255);
-        //    m2_Material.color = new Color32(255, 224, 189, 255);
-        //    m3_Material.color = new Color32(255, 224, 189, 255);
-
-        //    Debug.Log("Farbe: NORMAL");
-        //}else if (erscheinung[2] == '2')
-        //{
-        //    m1_Material.color = new Color32(255, 227, 159, 255);
-        //    m2_Material.color = new Color32(255, 227, 159, 255);
-        //    m3_Material.color = new Color32(255, 227, 159, 255);
-
-        //    Debug.Log("Farbe: GELB");
-        //}
-        //else if (erscheinung[2] == '3')
-        //{
-        //    m1_Material.color = new Color32(255, 102, 102, 255);
-        //    m2_Material.color = new Color32(255, 102, 102, 255);
-        //    m3_Material.color = new Color32(255, 102, 102, 255);
-
-        //    Debug.Log("Farbe: ROT");
-        //}
-        //else
-        //{
-        //    m1_Material.color = new Color32(255, 248, 241, 255);
-        //    m2_Material.color = new Color32(255, 248, 241, 255);
-        //    m3_Material.color = new Color32(255, 248, 241, 255);
-
-        //    Debug.Log("Farbe: BLASS");
-        //}
+        /*  
+         *  jedes mesh einzeln ansteuern weil es mehr als 1 gibt
+         *   m1_Material = clone.transform.Find("body").GetComponent<MeshRenderer>().material;
+         *   m2_Material = clone.transform.Find("Kopf").GetComponent<MeshRenderer>().material;
+         *   m3_Material = clone.transform.Find("Ohren").GetComponent<MeshRenderer>().material;
+         *
+         *  Debug.Log("Erscheinungs ID: " + Variablen.momentanerPatient.erscheinungID);
+         *
+         *  String erscheinung = Variablen.momentanerPatient.erscheinungID + "";
+         *
+         *  if(erscheinung[2] == '1')
+         *  {
+         *      m1_Material.color = new Color32(255, 224, 189, 255);
+         *      m2_Material.color = new Color32(255, 224, 189, 255);
+         *      m3_Material.color = new Color32(255, 224, 189, 255);
+         *
+         *      Debug.Log("Farbe: NORMAL");
+         *  }else if (erscheinung[2] == '2')
+         *  {
+         *      m1_Material.color = new Color32(255, 227, 159, 255);
+         *      m2_Material.color = new Color32(255, 227, 159, 255);
+         *      m3_Material.color = new Color32(255, 227, 159, 255);
+         *
+         *      Debug.Log("Farbe: GELB");
+         *  }
+         *  else if (erscheinung[2] == '3')
+         *  {
+         *      m1_Material.color = new Color32(255, 102, 102, 255);
+         *      m2_Material.color = new Color32(255, 102, 102, 255);
+         *      m3_Material.color = new Color32(255, 102, 102, 255);
+         *
+         *      Debug.Log("Farbe: ROT");
+         *  }
+         *  else
+         *  {
+         *      m1_Material.color = new Color32(255, 248, 241, 255);
+         *      m2_Material.color = new Color32(255, 248, 241, 255);
+         *      m3_Material.color = new Color32(255, 248, 241, 255);
+         *
+         *      Debug.Log("Farbe: BLASS");
+         *  } 
+         */
     }
 
 

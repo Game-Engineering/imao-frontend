@@ -9,16 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1820533919461338}
+  m_RootGameObject: {fileID: 1210733361962854}
   m_IsPrefabParent: 1
---- !u!1 &1820533919461338
+--- !u!1 &1210733361962854
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4969534319717162}
+  - component: {fileID: 4193295710502936}
   m_Layer: 0
   m_Name: Pos2
   m_TagString: Untagged
@@ -26,14 +26,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4969534319717162
+--- !u!4 &4193295710502936
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820533919461338}
+  m_GameObject: {fileID: 1210733361962854}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -7.015, y: 0.55, z: 2.04}
+  m_LocalPosition: {x: -7.015, y: 0.05, z: 2.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

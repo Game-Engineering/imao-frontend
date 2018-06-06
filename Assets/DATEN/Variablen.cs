@@ -12,13 +12,9 @@ public class Variablen
     ////Allgemein
     public static string spieler;
     public static string clickedButton;
-    public static Runde runde = new Runde();
-
-
-
-
-
-
+    public static RundeArzt rundeArzt = new RundeArzt();
+    public static RundeWirtschaft rundeWirtschaft = new RundeWirtschaft();
+    public static string arztOderWirtschaft;
 
 
     ////Zelt
@@ -45,7 +41,10 @@ public class Variablen
 
     ////Wirtschaft
     //Interview
-    public static Dialog interview;
+    public static Interviewpartner interviewPartner = new Interviewpartner();
+    public static Interview interview;
+    public static int momentanerInterviewpartnerID;
+    public static bool partnerAnwesend;
 
     //PK
     public static string iwasPKTEXT;
@@ -55,19 +54,33 @@ public class Variablen
     public static Budgetbericht budgetbericht;
 
     //Mails
-    public static List<Mail> mailliste;
     public static SendeMailliste sendeMailliste;
+    public static Postfach postfach = new Postfach();
+
+    //Sponsoren
+    public static bool sponsorenNeuLaden = true;
+    public static List<string> geworbeneSponsoren = new List<string>();
+    public static aktuelleSponsorenliste sponsorenlisteAktuell;
+    public static moeglicheSponsorenliste sponsorenlisteMoeglich;
 
 }
 
 [Serializable]
-public class Runde
+public class RundeArzt
 {
     public int budget;
     // public string nachricht;
     public int ruf;
     public int runde;
     public int wartendePatienten;
+}
+[Serializable]
+public class RundeWirtschaft
+{
+    public int budget;
+    // public string nachricht;
+    public int ruf;
+    public int runde;
 }
 
 [Serializable]
@@ -140,7 +153,7 @@ public class Budgetbericht
 public class Mail
 {
     public string absender;
-    public string mailinhalt;
+    public string mailInhalt;
 }
 
 [Serializable]
@@ -150,4 +163,59 @@ public class SendeMailliste
     public string ABMAHNUNG;
     public string GERAET_GEKAUFT;
     public string DEFAULT_MAIL;
+}
+
+[Serializable]
+public class Postfach
+{
+    public List<Mail> mailliste;
+}
+
+[Serializable]
+public class Interview
+{
+    public string name;
+    public string partner;
+    public string frage;
+    public List<string> antworten;
+    public string status;
+}
+
+[Serializable]
+public class Interviewpartner
+{
+    public List<IPartner> interviewPartner;
+}
+
+[Serializable]
+public class IPartner
+{
+    public int id;
+    public string name;
+    public int maxAnsehen;
+    public int schwierigkeit;
+}
+
+[Serializable]
+public class Sponsor
+{
+    public int ID;
+    public string sponsorName;
+    public int monatlicherBetrag;
+    public int benoetigtesAnsehen;
+    public int zeitraum;
+    public int absprungansehen;
+    public int anspruch;
+    public bool angeworben;
+}
+
+[Serializable]
+public class aktuelleSponsorenliste
+{
+    public List<Sponsor> aktuelleSponsoren;
+}
+[Serializable]
+public class moeglicheSponsorenliste
+{
+    public List<Sponsor> verfuegbareSponsoren;
 }
