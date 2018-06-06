@@ -175,6 +175,7 @@ public class SponsorenWindow : MonoBehaviour
     {
         int ID = -1;
         GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
+        clickedButton.GetComponent<Button>().interactable = false;
 
         foreach (Sponsor spon in Variablen.sponsorenlisteMoeglich.verfuegbareSponsoren)
         {

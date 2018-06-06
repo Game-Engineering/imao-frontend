@@ -115,13 +115,13 @@ public class MailsWindow : MonoBehaviour
                         }
                         else
                         {
-                            if (Variablen.postfach.mailliste[counter].mailInhalt.Length < 21)
+                            if (Variablen.postfach.mailliste[counter].betreff.Length < 21)
                             {
-                                txt.text = Variablen.postfach.mailliste[counter].mailInhalt;
+                                txt.text = Variablen.postfach.mailliste[counter].betreff;
                             }
                             else
                             {
-                                txt.text = Variablen.postfach.mailliste[counter].mailInhalt.Substring(0, 20) + "...";
+                                txt.text = Variablen.postfach.mailliste[counter].betreff.Substring(0, 20) + "...";
                             }
                         }
                     }

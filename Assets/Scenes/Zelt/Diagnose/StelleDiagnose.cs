@@ -51,6 +51,7 @@ public class StelleDiagnose : MonoBehaviour
         {
             antwort = aufruf.downloadHandler.text;
             Variablen.diagnoseErgebnis = JsonUtility.FromJson<DiagnoseErgebnis>(antwort);
+            Variablen.patientGeht = true;
             zeigeErgebnis();
             yield return new WaitForSeconds(3);
             Variablen.patientGeht = true;
@@ -61,7 +62,8 @@ public class StelleDiagnose : MonoBehaviour
 
     public void zeigeErgebnis()
     {
-        ergebnis.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
+        //ergebnis.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
+        ergebnis.GetComponentInChildren<Text>().text = Variablen.patientGeht + " " + Variablen.patientInZelt;
         auswahl.SetActive(false);
         ergebnis.SetActive(true);
 

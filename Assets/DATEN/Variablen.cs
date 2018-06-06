@@ -153,6 +153,7 @@ public class Budgetbericht
 public class Mail
 {
     public string absender;
+    public string betreff;
     public string mailInhalt;
 }
 

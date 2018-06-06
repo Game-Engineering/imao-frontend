@@ -32,9 +32,12 @@ public class RundenManager : MonoBehaviour
 
             GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.rundeArzt.budget + "";
             GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.rundeArzt.runde + "";
-            GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+            if (Variablen.arztOderWirtschaft == "arzt")
+            {
+                GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+                GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
+            }
             GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.rundeArzt.ruf + "";
-            GameObject.Find("RufePatienten").GetComponent<Button>().interactable = true;
 
         }
     }
@@ -43,7 +46,10 @@ public class RundenManager : MonoBehaviour
     {
         GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.rundeArzt.budget + "";
         GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.rundeArzt.runde + "";
-        GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+        if (Variablen.arztOderWirtschaft == "arzt")
+        {
+            GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
+        }
         GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.rundeArzt.ruf + "";
     }
 
