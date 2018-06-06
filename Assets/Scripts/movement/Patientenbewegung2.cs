@@ -66,6 +66,7 @@ public class Patientenbewegung2 : MonoBehaviour
                 {
                     //Debug.Log("Boah, lass mal aufhören zu laufen." + "Momentaner Wegpunkt: " + momentanerWegpunkt);
                     sollLaufen = false;
+                    Variablen.patientInZelt = true;
                     anim.SetBool("Walking", false);
                 }
             }

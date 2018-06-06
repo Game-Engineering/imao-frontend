@@ -11,14 +11,20 @@ public class InterviewManager : MonoBehaviour
     public Canvas can;
     public GameObject panelPartner;
     public Image list;
+    public GameObject panelPC;
     public Canvas blendekomm;
     public Canvas blendegeht;
+
+    public Transform spawnpoint;
+    public GameObject[] interviewpartner;
+
 
     public Text debug;
 
     private string antwort;
     private int counter = 0;
     private bool wartend = false;
+    private GameObject clone = null;
 
     public void starteDialog()
     {
@@ -39,8 +45,9 @@ public class InterviewManager : MonoBehaviour
 
         StartCoroutine(getDialog("interview/" + Variablen.momentanerInterviewpartnerID));
 
+        blende();
+
         //diagnose.gameObject.SetActive(false); //alles was aus gehn muss (Berichte etc) hier
-        can.gameObject.SetActive(true);
 
         Variablen.dialogOffen = true;
     }
@@ -69,26 +76,33 @@ public class InterviewManager : MonoBehaviour
         {
             antwort = aufruf.downloadHandler.text;
 
-            debug.text += antwort + "\n";
 
             Variablen.interview = JsonUtility.FromJson<Interview>(antwort);
-            can.GetComponentInChildren<Text>().text = Variablen.interview.frage;
-            debug.text += Variablen.interview.frage;
-            foreach (Button but in can.GetComponentsInChildren<Button>(true))
+            if (Variablen.interview.frage != "ENDE")
             {
-                if (counter < Variablen.interview.antworten.Count)
+                can.GetComponentInChildren<Text>().text = Variablen.interview.frage;
+                foreach (Button but in can.GetComponentsInChildren<Button>(true))
                 {
-                    but.GetComponentInChildren<Text>().text = Variablen.interview.antworten[counter];
-                    but.gameObject.SetActive(true);
-                    counter++;
-                }
-                else
-                {
-                    but.GetComponentInChildren<Text>().text = "";
-                    // but.enabled = false;
-                    but.gameObject.SetActive(false);
+                    if (counter < Variablen.interview.antworten.Count)
+                    {
+                        but.GetComponentInChildren<Text>().text = Variablen.interview.antworten[counter];
+                        but.gameObject.SetActive(true);
+                        counter++;
+                    }
+                    else
+                    {
+                        but.GetComponentInChildren<Text>().text = "";
+                        // but.enabled = false;
+                        but.gameObject.SetActive(false);
+                    }
                 }
             }
+            else
+            {
+                can.GetComponentInChildren<Text>().text = "Danke, dass Sie sich die Zeit genommen haben";
+                blende();
+            }
+
 
 
             counter = 0;
@@ -216,23 +230,38 @@ public class InterviewManager : MonoBehaviour
             img = blendegeht.GetComponentInChildren<Image>();
             txt = blendegeht.GetComponentInChildren<Text>();
             blendegeht.gameObject.SetActive(true);
-            StartCoroutine("ausblenden", blendegeht);
-            
+            StartCoroutine("beendeInterviewBlende");
+            Variablen.partnerAnwesend = false;
         }
         else
         {
             img = blendekomm.GetComponentInChildren<Image>();
             txt = blendekomm.GetComponentInChildren<Text>();
             blendekomm.gameObject.SetActive(true);
-            StartCoroutine("ausblenden", blendekomm);
+            StartCoroutine("startInterviewBlende");
+            Variablen.partnerAnwesend = true;
         }
 
     }
 
-    IEnumerator ausblenden (Canvas can) 
+    IEnumerator startInterviewBlende()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
+        panelPC.SetActive(false);
+        can.gameObject.SetActive(true);
+        clone = Instantiate(interviewpartner[Random.Range(0,interviewpartner.Length-1)], spawnpoint.position, spawnpoint.rotation) as GameObject;
+        yield return new WaitForSeconds(2);
+        blendekomm.gameObject.SetActive(false);
+    }
+    IEnumerator beendeInterviewBlende()
+    {
+        yield return new WaitForSeconds(1);
+        panelPC.SetActive(true);
+        panelPartner.SetActive(false);
         can.gameObject.SetActive(false);
+        Destroy(clone);
+        yield return new WaitForSeconds(2);
+        blendegeht.gameObject.SetActive(false);
     }
 
 }

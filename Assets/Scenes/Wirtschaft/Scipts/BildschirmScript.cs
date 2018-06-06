@@ -27,7 +27,7 @@ public class BildschirmScript : MonoBehaviour {
         {
             wms.startePC();
         }
-	}
+    }
 
     private void OnMouseOver()
     {

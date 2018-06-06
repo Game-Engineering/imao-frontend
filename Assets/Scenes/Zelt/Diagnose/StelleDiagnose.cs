@@ -62,14 +62,14 @@ public class StelleDiagnose : MonoBehaviour
 
     public void zeigeErgebnis()
     {
-        //ergebnis.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
-        ergebnis.GetComponentInChildren<Text>().text = Variablen.patientGeht + " " + Variablen.patientInZelt;
+        ergebnis.GetComponentInChildren<Text>().text = Variablen.diagnoseErgebnis.nachricht;
         auswahl.SetActive(false);
         ergebnis.SetActive(true);
 
         GameObject.Find("StelleDiagnose").GetComponent<Button>().interactable = false;
         GameObject.Find("ZeigeBlutbild").GetComponent<Button>().interactable = false;
         GameObject.Find("StarteDialog").GetComponent<Button>().interactable = false;
+        Variablen.patientInZelt = false;
 
         GameObject.Find("NeueRunde").GetComponent<Button>().interactable = true;
 

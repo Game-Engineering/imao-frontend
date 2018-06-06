@@ -36,6 +36,9 @@ public class Variablen
     public static Patient momentanerPatient = new Patient();
 
     public static Blutbild blutbild = new Blutbild();
+    public static Roentgenbild roentgenbild = new Roentgenbild();
+    public static Ultraschall ultraschall = new Ultraschall();
+
 
 
 
@@ -116,6 +119,22 @@ public class Blutbild
     public double MCH;
     public double MCHC;
     public double MCV;
+}
+
+[Serializable]
+public class Roentgenbild
+{
+    public int budget;
+    public string name;
+    public int roentgenID;
+}
+
+[Serializable]
+public class Ultraschall
+{
+    public int budget;
+    public string name;
+    public int ultraschallID;
 }
 
 [Serializable]

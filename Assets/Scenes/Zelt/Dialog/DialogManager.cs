@@ -9,6 +9,8 @@ public class DialogManager : MonoBehaviour
 
     public Canvas can;
     public Canvas blutbild;
+    public Canvas ultraschall;
+    public Canvas roentgenbild;
     public Canvas diagnose;
 
     private string antwort;
@@ -36,8 +38,17 @@ public class DialogManager : MonoBehaviour
 
     public void blutbildErstellen()
     {
-
         StartCoroutine(getBlutbild("getBlutbild/" + Variablen.momentanerPatient.ID));
+    }
+
+    public void roentgenbildErstellen()
+    {
+        StartCoroutine(getRoentgenbild("getRoentgen/" + Variablen.momentanerPatient.ID));
+    }
+
+    public void ultraschallErstellen()
+    {
+        StartCoroutine(getUltraschall("getUltraschall/" + Variablen.momentanerPatient.ID));
     }
 
     IEnumerator getDialog(string schnittstelle)
@@ -85,7 +96,10 @@ public class DialogManager : MonoBehaviour
             if (Variablen.anamnese.option.Equals("blutbild"))
             {
                 GameObject.Find("ZeigeBlutbild").GetComponent<Button>().interactable = true;
-
+            }
+            if (Variablen.anamnese.option.Equals("ultraschall"))
+            {
+                GameObject.Find("ZeigeUltraschall").GetComponent<Button>().interactable = true;
             }
             counter = 0;
         }
@@ -120,6 +134,53 @@ public class DialogManager : MonoBehaviour
             GameObject.Find("MCVWert").GetComponent<Text>().text = Variablen.blutbild.MCV + "fl";
         }
     }
+
+    IEnumerator getRoentgenbild(string schnittstelle)
+    {
+        UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+            roentgenbild.gameObject.SetActive(false);
+        }
+        else
+        {
+            antwort = aufruf.downloadHandler.text;
+
+            Variablen.roentgenbild = JsonUtility.FromJson<Roentgenbild>(antwort);
+
+
+            roentgenbild.gameObject.SetActive(true);
+            roentgenbild.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>("Images/Zelt/roentgen" + Variablen.roentgenbild.roentgenID);
+
+        }
+    }
+
+    IEnumerator getUltraschall(string schnittstelle)
+    {
+        UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+        }
+        else
+        {
+            antwort = aufruf.downloadHandler.text;
+
+            Variablen.ultraschall = JsonUtility.FromJson<Ultraschall>(antwort);
+
+            ultraschall.gameObject.SetActive(true);
+            ultraschall.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>("Images/Zelt/ultraschall" + Variablen.ultraschall.ultraschallID);
+
+        }
+    }
+
 
     public void setB1()
     {
