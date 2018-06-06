@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: b9ce38028ced3dd47ac2de31303a123e
+timeCreated: 1527776403
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: getauschte_normale
+    100004: Holz
+    100006: Holz_2
+    100008: Seil
+    100010: Seil_2
+    100012: "W\xE4sche"
+    100014: "W\xE4sche_1"
+    100016: "W\xE4sche_1_2"
+    100018: "W\xE4sche_2"
+    100020: "W\xE4sche_2_2"
+    100022: "W\xE4sche_2_3"
+    100024: "W\xE4sche_3"
+    100026: "W\xE4sche_3_2"
+    100028: "W\xE4scheleine"
+    100030: "W\xE4scheleine_1"
+    100032: Zelt
+    100034: Zelt_1
+    100036: Zelt_1_1
+    100038: Zelt_1_2
+    100040: Zelt_2
+    100042: Zelt_2_1
+    100044: Zelt_3
+    100046: Zelt_3_1
+    400000: //RootNode
+    400002: getauschte_normale
+    400004: Holz
+    400006: Holz_2
+    400008: Seil
+    400010: Seil_2
+    400012: "W\xE4sche"
+    400014: "W\xE4sche_1"
+    400016: "W\xE4sche_1_2"
+    400018: "W\xE4sche_2"
+    400020: "W\xE4sche_2_2"
+    400022: "W\xE4sche_2_3"
+    400024: "W\xE4sche_3"
+    400026: "W\xE4sche_3_2"
+    400028: "W\xE4scheleine"
+    400030: "W\xE4scheleine_1"
+    400032: Zelt
+    400034: Zelt_1
+    400036: Zelt_1_1
+    400038: Zelt_1_2
+    400040: Zelt_2
+    400042: Zelt_2_1
+    400044: Zelt_3
+    400046: Zelt_3_1
+    2100000: "w\xE4sche"
+    2100002: Seil
+    2100004: Holz
+    2100006: zelt blau
+    2300000: Holz
+    2300002: Holz_2
+    2300004: Seil
+    2300006: Seil_2
+    2300008: "W\xE4sche"
+    2300010: "W\xE4sche_1"
+    2300012: "W\xE4sche_1_2"
+    2300014: "W\xE4sche_2"
+    2300016: "W\xE4sche_2_2"
+    2300018: "W\xE4sche_2_3"
+    2300020: "W\xE4sche_3"
+    2300022: "W\xE4sche_3_2"
+    2300024: Zelt
+    2300026: Zelt_1
+    2300028: Zelt_1_1
+    2300030: Zelt_1_2
+    2300032: Zelt_2
+    2300034: Zelt_2_1
+    2300036: Zelt_3
+    2300038: Zelt_3_1
+    3300000: Holz
+    3300002: Holz_2
+    3300004: Seil
+    3300006: Seil_2
+    3300008: "W\xE4sche"
+    3300010: "W\xE4sche_1"
+    3300012: "W\xE4sche_1_2"
+    3300014: "W\xE4sche_2"
+    3300016: "W\xE4sche_2_2"
+    3300018: "W\xE4sche_2_3"
+    3300020: "W\xE4sche_3"
+    3300022: "W\xE4sche_3_2"
+    3300024: Zelt
+    3300026: Zelt_1
+    3300028: Zelt_1_1
+    3300030: Zelt_1_2
+    3300032: Zelt_2
+    3300034: Zelt_2_1
+    3300036: Zelt_3
+    3300038: Zelt_3_1
+    4300000: "W\xE4sche_3"
+    4300002: "W\xE4sche_2"
+    4300004: "W\xE4sche_1"
+    4300006: "W\xE4sche"
+    4300008: Seil
+    4300010: Holz
+    4300012: "W\xE4sche_3_2"
+    4300014: "W\xE4sche_2_2"
+    4300016: "W\xE4sche_1_2"
+    4300018: "W\xE4sche_2_3"
+    4300020: Seil_2
+    4300022: Holz_2
+    4300024: Zelt_3
+    4300026: Zelt_2_1
+    4300028: Zelt_1_2
+    4300030: Zelt
+    4300032: Zelt_1
+    4300034: Zelt_1_1
+    4300036: Zelt_2
+    4300038: Zelt_3_1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
