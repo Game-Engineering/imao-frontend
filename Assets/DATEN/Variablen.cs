@@ -13,13 +13,7 @@ public class Variablen
     public static string spieler;
     public static string clickedButton;
     public static Runde runde = new Runde();
-
-
-
-
-
-
-
+    public static string arztOderWirtschaft;
 
     ////Zelt
     //Anamnese
