@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/domin/Desktop/imao/IMAO v0.4.2/IMAO v0.4.2.exe
+C:/Users/domin/Desktop/imao/IMAO v0.5.0/IMAO v0.5.0.exe
 SceneListBegin?
 Assets/Scenes/Hauptmenu/Hauptmenü.unity
 Assets/Scenes/Wirtschaft/Wirtschaft.unity
