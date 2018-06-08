@@ -31,8 +31,11 @@ public class BildschirmScript : MonoBehaviour {
 
     private void OnMouseOver()
     {
-        mrenderer.material.color = hovercolor;
-        hovered = gameObject;
+        if (!Variablen.bildschirmactive)
+        {
+            mrenderer.material.color = hovercolor;
+            hovered = gameObject;
+        }
     }
 
     private void OnMouseExit()

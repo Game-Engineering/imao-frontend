@@ -14,10 +14,12 @@ public class WindowManagerScript : MonoBehaviour {
     public void startePC()
     {
         pc.SetActive(true);
+        Variablen.bildschirmactive = true;
     }
     public void beendePC()
     {
         pc.SetActive(false);
+        Variablen.bildschirmactive = false;
     }
 
 

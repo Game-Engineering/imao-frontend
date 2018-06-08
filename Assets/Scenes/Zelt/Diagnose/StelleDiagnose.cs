@@ -56,6 +56,7 @@ public class StelleDiagnose : MonoBehaviour
             yield return new WaitForSeconds(3);
             Variablen.patientGeht = true;
             Variablen.patientInZelt = false;
+            Variablen.patientVorhanden = false;
             can.gameObject.SetActive(false);
         }
     }

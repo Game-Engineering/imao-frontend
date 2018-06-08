@@ -11,10 +11,37 @@ public class RundenManager : MonoBehaviour
 
     public void starteNeueRunde()
     {
-        if (!Variablen.patientVorhanden && !Variablen.patientInZelt && !Variablen.patientGeht)
-            StartCoroutine(sendeRequestRunde("neueRunde"));
+        if (Variablen.arztOderWirtschaft == "arzt")
+        {
+            if (!Variablen.patientVorhanden && !Variablen.patientInZelt && !Variablen.patientGeht)
+                StartCoroutine(sendeRequestRunde("neueRunde"));
+        } else
+        {
+            StartCoroutine(sendeRequestRundeWirtschaft("neueRunde"));
+        }
     }
 
+    IEnumerator sendeRequestRundeWirtschaft(string schnittstelle)
+    {
+        UnityWebRequest aufruf = new UnityWebRequest(Konstanten.URL + schnittstelle);
+        aufruf.downloadHandler = new DownloadHandlerBuffer();  //Downloadhandler liest Antwort von GET
+        yield return aufruf.SendWebRequest();
+
+        if (aufruf.isNetworkError || aufruf.isHttpError)
+        {
+            Debug.Log(aufruf.error);
+        }
+        else
+        {
+            Variablen.rundeWirtschaft = JsonUtility.FromJson<RundeWirtschaft>(aufruf.downloadHandler.text);
+
+            GameObject.Find("GeldWert").GetComponent<Text>().text = Variablen.rundeWirtschaft.budget + "";
+            GameObject.Find("RundeWert").GetComponent<Text>().text = Variablen.rundeWirtschaft.runde + "";
+            
+            GameObject.Find("RufWert").GetComponent<Text>().text = Variablen.rundeWirtschaft.ruf + "";
+
+        }
+    }
 
     IEnumerator sendeRequestRunde(string schnittstelle)
     {
@@ -55,6 +82,6 @@ public class RundenManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("rundeNeuladen", 5, 5);
+        //InvokeRepeating("rundeNeuladen", 5, 5);
     }
 }

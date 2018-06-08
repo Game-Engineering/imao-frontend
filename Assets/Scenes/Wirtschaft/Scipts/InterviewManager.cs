@@ -101,7 +101,6 @@ public class InterviewManager : MonoBehaviour
             {
                 can.GetComponentInChildren<Text>().text = "Danke, dass Sie sich die Zeit genommen haben";
                 StartCoroutine("beendeInterview");
-                blende();
             }
 
 

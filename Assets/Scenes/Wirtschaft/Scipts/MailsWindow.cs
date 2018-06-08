@@ -10,6 +10,7 @@ public class MailsWindow : MonoBehaviour
     public GameObject panelSenden;
     public GameObject panelErhalten;
     public GameObject panelMail;
+    public GameObject panelSendeMail;
     public GameObject mailsWindow;
     public Image list;
 
@@ -21,6 +22,8 @@ public class MailsWindow : MonoBehaviour
     public void zeigeSendbareMails()
     {
         StartCoroutine(getSendbareMails("getMoeglicheSendeMails"));
+        panelSendeMail.SetActive(true);
+        panelMail.SetActive(false);
     }
 
     IEnumerator getSendbareMails(string schnittstelle)
@@ -47,10 +50,25 @@ public class MailsWindow : MonoBehaviour
             panelSenden.SetActive(true);
             // GameObject.Find("Lob").GetComponent<Text>().text = Variablen.sendeMailliste.LOB;
             GameObject.Find("Lob").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.LOB;
+            if(Variablen.sendeMailliste.LOB == "")
+            {
+                GameObject.Find("Lob").GetComponent<Button>().interactable = false;
+            }
             GameObject.Find("Default").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.DEFAULT_MAIL;
+            if (Variablen.sendeMailliste.DEFAULT_MAIL == "")
+            {
+                GameObject.Find("Default").GetComponent<Button>().interactable = false;
+            }
             GameObject.Find("GeraeGekauft").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.GERAET_GEKAUFT;
+            if (Variablen.sendeMailliste.GERAET_GEKAUFT == "")
+            {
+                GameObject.Find("GeraeGekauft").GetComponent<Button>().interactable = false;
+            }
             GameObject.Find("Abmahnung").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.ABMAHNUNG;
-
+            if (Variablen.sendeMailliste.ABMAHNUNG == "")
+            {
+                GameObject.Find("Abmahnung").GetComponent<Button>().interactable = false;
+            }
         }
     }
 
@@ -155,6 +173,7 @@ public class MailsWindow : MonoBehaviour
                 txt.text = Variablen.postfach.mailliste[id].mailInhalt;
             }
         }
+        panelSendeMail.SetActive(false);
         panelMail.SetActive(true);
 
         bool mailVonSponsor = false;
@@ -180,7 +199,6 @@ public class MailsWindow : MonoBehaviour
         }
         
     }
-
 
     public void schliesseMail()
     {

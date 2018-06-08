@@ -50,7 +50,7 @@ public class Variablen
     public static bool partnerAnwesend;
 
     //PK
-    public static string iwasPKTEXT;
+    public static Pressekonferenzobjekt pressekonferenz = new Pressekonferenzobjekt();
 
     //Berichte
     public static Arztbericht arztbericht;
@@ -65,6 +65,8 @@ public class Variablen
     public static List<string> geworbeneSponsoren = new List<string>();
     public static aktuelleSponsorenliste sponsorenlisteAktuell;
     public static moeglicheSponsorenliste sponsorenlisteMoeglich;
+
+    public static bool bildschirmactive = false;
 
 }
 
@@ -84,6 +86,7 @@ public class RundeWirtschaft
     // public string nachricht;
     public int ruf;
     public int runde;
+    public string aufgabe;
 }
 
 [Serializable]
@@ -238,4 +241,15 @@ public class aktuelleSponsorenliste
 public class moeglicheSponsorenliste
 {
     public List<Sponsor> verfuegbareSponsoren;
+}
+
+[Serializable]
+public class Pressekonferenzobjekt
+{
+    public string name;
+    public string thema;
+    public string status;
+    public string einleitung;
+    public string frage;
+    public List<string> antworten;
 }
