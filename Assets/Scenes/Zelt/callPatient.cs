@@ -117,17 +117,13 @@ public class callPatient : MonoBehaviour
 
     private void Update()
     {
-
-
-
-        //farbwechsel testen
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            erstellePatient();
-            Variablen.patientVorhanden = true;
-        }
-        //wenn patient gerufen, dann bewegen
-
+        ////farbwechsel testen
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    erstellePatient();
+        //    Variablen.patientVorhanden = true;
+        //}
+        ////wenn patient gerufen, dann bewegen
     }
 
     //Patient wird anhand der Patient.erscheinungID

@@ -2228,6 +2228,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114149975977172534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2240,13 +2241,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wegpunkteKommen:
-  - {fileID: 4742628062243054, guid: 435df89d0bae3a04f9a4833590f43c19, type: 2}
-  - {fileID: 4215872296246246, guid: 8c3ce3e5284fbd54082f71c8541bc7b7, type: 2}
-  - {fileID: 4193295710502936, guid: ecbfad76f588b9c499d4c1c58fd925ec, type: 2}
+  - {fileID: 4004235199038560, guid: 6e6a2b92ff77a7e4c97474cebf40e6ef, type: 2}
+  - {fileID: 4526708817052074, guid: 94a1eadc2d7db064ba6ca67cad84fd75, type: 2}
+  - {fileID: 4833086907492590, guid: 9609bbe4501f2f644a9671cc8fceb196, type: 2}
+  - {fileID: 4779323085248808, guid: ec04d94fc26226640b966018846c803e, type: 2}
+  - {fileID: 4520841217140376, guid: b1a9ebc5d21067c438aaaadae968dd95, type: 2}
+  - {fileID: 4467310986106004, guid: f8dd8ead9b44ccc4e8549a59e1c9ca13, type: 2}
+  - {fileID: 4537367394245808, guid: 8c726110a8965d342b20706088d8df33, type: 2}
   wegpunkteGehen:
-  - {fileID: 4180236056396550, guid: 5bb8b51008246bf4c92fb7e0dbd4d3e2, type: 2}
-  - {fileID: 4433416281724772, guid: d5759eb5d3306224fb47f5b0d9f5af65, type: 2}
-  - {fileID: 4731718855269472, guid: 6d8634b8136bed44388dd1895a637454, type: 2}
+  - {fileID: 4312655605244426, guid: 76b9d5050b6f9474da349421c1aa772e, type: 2}
+  - {fileID: 4160154507490212, guid: 20d7205e24aa81f4da996f8b3371ed13, type: 2}
+  - {fileID: 4486932409891838, guid: 8e44efa73d44f634bb6b5d40574fd355, type: 2}
+  - {fileID: 4434103228590648, guid: 2ac1055a99d0bba45b81f2f48792f2c5, type: 2}
+  - {fileID: 4844571823140612, guid: 6940e8fa5c24e07408dfdd3fff8c2816, type: 2}
+  - {fileID: 4804003126704376, guid: 12b227d99461f114299d09f15e05222d, type: 2}
+  - {fileID: 4089804464825184, guid: 1077cf38cb5c1e846b9326b3ce5dee03, type: 2}
 --- !u!137 &137188080725913960
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2260,6 +2269,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d6bc0d3c0bc16f646a7917a378739c12, type: 2}
   m_StaticBatchInfo:
@@ -2316,6 +2326,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1fc60160474214844b8fbe64bf5acc80, type: 2}
   m_StaticBatchInfo:
@@ -2363,6 +2374,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 422e49d1b07ced448bb737905b68b294, type: 2}
   m_StaticBatchInfo:
@@ -2413,6 +2425,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: c525ad9bd5469424d964c8216dc55f45, type: 2}
   m_StaticBatchInfo:
@@ -2466,6 +2479,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: c79624edecfcc4d4e9eea4e83210406b, type: 2}
   m_StaticBatchInfo:
@@ -2562,6 +2576,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1fc60160474214844b8fbe64bf5acc80, type: 2}
   m_StaticBatchInfo:
@@ -2609,6 +2624,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 27fd0367ffe936d45b141f6ae0b49825, type: 2}
   m_StaticBatchInfo:

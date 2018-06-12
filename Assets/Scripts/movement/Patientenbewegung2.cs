@@ -32,26 +32,16 @@ public class Patientenbewegung2 : MonoBehaviour
     {
         if (Variablen.patientVorhanden)
         {
-            Quaternion neueRotation = Quaternion.LookRotation(wegpunkteKommen[momentanerWegpunkt].position);
-            transform.rotation = neueRotation;
+            if (momentanerWegpunkt < wegpunkteKommen.Length-1)
+            {
+                Quaternion neueRotation = Quaternion.LookRotation(wegpunkteKommen[momentanerWegpunkt].position - transform.position);
+                transform.rotation = neueRotation;
+            }
+
+            //Debug.Log("I turned.");
             sollLaufen = true;
             //Debug.Log("#KOMMEN# Initiiere Lauf-Sequenz . . ." + "Momentaner Wegpunkt: " + momentanerWegpunkt);
-        }
 
-        if (Variablen.patientGeht)
-        {
-            Quaternion neueRotationGehen = Quaternion.LookRotation(wegpunkteGehen[momentanerWegpunktGehen].position);
-            transform.rotation = neueRotationGehen;
-            sollLaufen = true;
-            Debug.Log(sollLaufen);
-            //Debug.Log("#GEHEN# Initiiere Lauf-Sequenz . . ." + "Momentaner Wegpunkt: " + momentanerWegpunkt);
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (Variablen.patientVorhanden)
-        {
             if (sollLaufen)
             {
                 //Debug.Log("#KOMMEN# LAUF, WALD, LAUF!" + "Momentaner Wegpunkt: " + momentanerWegpunkt);
@@ -59,7 +49,7 @@ public class Patientenbewegung2 : MonoBehaviour
                 momentanePosition = transform.position;
                 rb.MovePosition(Vector3.MoveTowards(momentanePosition, wegpunkteKommen[momentanerWegpunkt].position, Time.fixedDeltaTime * geschwindigkeit));
 
-                if (momentanerWegpunkt < 2 && Vector3.Distance(momentanePosition, wegpunkteKommen[momentanerWegpunkt].position) < 0.1)
+                if (momentanerWegpunkt < wegpunkteKommen.Length-1 && Vector3.Distance(momentanePosition, wegpunkteKommen[momentanerWegpunkt].position) < 0.1)
                 {
                     momentanerWegpunkt++;
                 }
@@ -75,6 +65,16 @@ public class Patientenbewegung2 : MonoBehaviour
 
         if (Variablen.patientGeht)
         {
+            if (momentanerWegpunktGehen < wegpunkteGehen.Length - 1)
+            {
+                Quaternion neueRotationGehen = Quaternion.LookRotation(wegpunkteGehen[momentanerWegpunktGehen].position - transform.position);
+                transform.rotation = neueRotationGehen;
+            }
+
+            sollLaufen = true;
+            //Debug.Log(sollLaufen);
+            //Debug.Log("#GEHEN# Initiiere Lauf-Sequenz . . ." + "Momentaner Wegpunkt: " + momentanerWegpunkt);
+
             if (sollLaufen)
             {
                 //Debug.Log("#GEHEN# LAUF, WALD, LAUF!" + "Momentaner Wegpunkt: " + momentanerWegpunkt);
@@ -82,7 +82,7 @@ public class Patientenbewegung2 : MonoBehaviour
                 momentanePosition = transform.position;
                 rb.MovePosition(Vector3.MoveTowards(momentanePosition, wegpunkteGehen[momentanerWegpunktGehen].position, Time.fixedDeltaTime * geschwindigkeit));
 
-                if (momentanerWegpunktGehen < 2 && Vector3.Distance(momentanePosition, wegpunkteGehen[momentanerWegpunktGehen].position) < 0.1)
+                if (momentanerWegpunktGehen < wegpunkteGehen.Length-1 && Vector3.Distance(momentanePosition, wegpunkteGehen[momentanerWegpunktGehen].position) < 0.1)
                 {
                     momentanerWegpunktGehen++;
                 }
@@ -96,24 +96,17 @@ public class Patientenbewegung2 : MonoBehaviour
             }
         }
 
-        ////testen fürs sterben (lul)
-        ///**
-        // * kp wie die Abfrage ist für's sterben; gibt's was in Variablen was gesettet wird, wenn die falsche Diagnose gesetzt wird?
-        // * am besten: patientVorhanden UND patientGeht werden auf false gesetzt, eine neue variable patientStirbt auf true? idk ob das der fall ist
-        // */
-
-        //if ()
-        //{
-        //    GetComponent<Animator>().SetBool("isAlive", false);
-        //}
-
     }
-}
 
-/**
- * Ideen warum es nicht geht:
- * - alles unter ein FixedUpdate/Update nicht auftrennen?
- * - patientGeht wird nicht auf true gesetzt?
- * - honestly kp was sonst da es legit copy paste von dem davor ist was läuft; sie haben separate wegpunkte, separate wegpunkt counter, momentanePosition wird immer neu genommen und
- *   obwohl sollLaufen im FixedUpdate auf falsch gesetzt wird, wird es im Udpate wieder auf true gesetzt, sobal patientGeht true ist
- */ 
+    ////testen fürs sterben (lul)
+    ///**
+    // * kp wie die Abfrage ist für's sterben; gibt's was in Variablen was gesettet wird, wenn die falsche Diagnose gesetzt wird?
+    // * am besten: patientVorhanden UND patientGeht werden auf false gesetzt, eine neue variable patientStirbt auf true? idk ob das der fall ist
+    // */
+
+    //if ()
+    //{
+    //    GetComponent<Animator>().SetBool("isAlive", false);
+    //}
+
+}

@@ -51,7 +51,7 @@ public class StelleDiagnose : MonoBehaviour
         {
             antwort = aufruf.downloadHandler.text;
             Variablen.diagnoseErgebnis = JsonUtility.FromJson<DiagnoseErgebnis>(antwort);
-            Variablen.patientGeht = true;
+            //Variablen.patientGeht = true;
             zeigeErgebnis();
             yield return new WaitForSeconds(3);
             Variablen.patientGeht = true;
