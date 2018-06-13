@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Singleton zur globalen Verwaltung der Szenenlogik
 /// </summary>
-public class IMAO {
+public class IMAO
+{
     #region Singleton
     private static IMAO instanz;
 
@@ -23,6 +24,7 @@ public class IMAO {
     private IMAO() { }
     #endregion
 
+
     public void Beende()
     {
         Application.Quit();
@@ -35,7 +37,7 @@ public class IMAO {
 
     public void LadeZelt()
     {
-        SceneManager.LoadScene("Zelt");
+        SceneManager.LoadScene("ZeltTest");
     }
 
     public void LadeWirtschaft()

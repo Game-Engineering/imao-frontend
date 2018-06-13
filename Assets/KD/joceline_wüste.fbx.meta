@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: 3fe1f65f10f327b42959c6c331a0d01d
+timeCreated: 1523021938
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: "gro\xDFer_berg"
+    100002: "gro\xDFer_berg_1"
+    100004: "gro\xDFer_berg_2"
+    100006: "gro\xDFer_berg_3"
+    100008: "gro\xDFer_berg_4"
+    100010: "gro\xDFer_berg_5"
+    100012: "gro\xDFer_berg_6"
+    100014: "gro\xDFer_berg_7"
+    100016: //RootNode
+    100018: "w\xFCste"
+    100020: Zelt
+    400000: "gro\xDFer_berg"
+    400002: "gro\xDFer_berg_1"
+    400004: "gro\xDFer_berg_2"
+    400006: "gro\xDFer_berg_3"
+    400008: "gro\xDFer_berg_4"
+    400010: "gro\xDFer_berg_5"
+    400012: "gro\xDFer_berg_6"
+    400014: "gro\xDFer_berg_7"
+    400016: //RootNode
+    400018: "w\xFCste"
+    400020: Zelt
+    2100000: Mat
+    2300000: "gro\xDFer_berg"
+    2300002: "gro\xDFer_berg_1"
+    2300004: "gro\xDFer_berg_2"
+    2300006: "gro\xDFer_berg_3"
+    2300008: "gro\xDFer_berg_4"
+    2300010: "gro\xDFer_berg_5"
+    2300012: "gro\xDFer_berg_6"
+    2300014: "gro\xDFer_berg_7"
+    2300016: "w\xFCste"
+    2300018: Zelt
+    3300000: "gro\xDFer_berg"
+    3300002: "gro\xDFer_berg_1"
+    3300004: "gro\xDFer_berg_2"
+    3300006: "gro\xDFer_berg_3"
+    3300008: "gro\xDFer_berg_4"
+    3300010: "gro\xDFer_berg_5"
+    3300012: "gro\xDFer_berg_6"
+    3300014: "gro\xDFer_berg_7"
+    3300016: "w\xFCste"
+    3300018: Zelt
+    4300000: "gro\xDFer_berg_7"
+    4300002: "gro\xDFer_berg_5"
+    4300004: "gro\xDFer_berg_4"
+    4300006: "gro\xDFer_berg_3"
+    4300008: "gro\xDFer_berg_6"
+    4300010: "gro\xDFer_berg_2"
+    4300012: "gro\xDFer_berg_1"
+    4300014: "gro\xDFer_berg"
+    4300016: Zelt
+    4300018: "w\xFCste"
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
