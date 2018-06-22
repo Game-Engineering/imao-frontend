@@ -68,6 +68,11 @@ public class Variablen
 
     public static bool bildschirmactive = false;
 
+    //WIKI
+    public static WikiKategorien wikiKategorien;
+    public static Unterkategorien unterkategorien;
+    public static WikiTexte wikiTexte;
+
 }
 
 [Serializable]
@@ -252,4 +257,39 @@ public class Pressekonferenzobjekt
     public string einleitung;
     public string frage;
     public List<string> antworten;
+}
+
+[Serializable]
+public class WikiKategorien
+{
+    public List<String> Kategorien;
+}
+
+[Serializable]
+public class Unterkategorien
+{
+    public string typ;
+    public List<Unterkategorie> response;
+}
+
+[Serializable]
+public class Unterkategorie
+{
+    public string question;
+    public int id;
+}
+
+[Serializable]
+public class WikiTexte
+{
+    public string typ;
+    public WikiText response;
+}
+
+[Serializable]
+public class WikiText
+{
+    public string question;
+    public string content;
+    public int id;
 }

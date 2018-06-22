@@ -50,24 +50,56 @@ public class MailsWindow : MonoBehaviour
             panelSenden.SetActive(true);
             // GameObject.Find("Lob").GetComponent<Text>().text = Variablen.sendeMailliste.LOB;
             GameObject.Find("Lob").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.LOB;
-            if(Variablen.sendeMailliste.LOB == "")
+            if (Variablen.sendeMailliste.LOB == "" || Variablen.sendeMailliste.LOB == null)
             {
-                GameObject.Find("Lob").GetComponent<Button>().interactable = false;
+                GameObject ButtonLob = GameObject.Find("Lob");
+                ButtonLob.GetComponent<Button>().interactable = false;
+                ButtonLob.SetActive(false);
+            }
+            else
+            {
+                GameObject ButtonLob = GameObject.Find("Lob");
+                ButtonLob.GetComponent<Button>().interactable = true;
+                ButtonLob.SetActive(true);
             }
             GameObject.Find("Default").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.DEFAULT_MAIL;
-            if (Variablen.sendeMailliste.DEFAULT_MAIL == "")
+            if (Variablen.sendeMailliste.DEFAULT_MAIL == "" || Variablen.sendeMailliste.DEFAULT_MAIL == null)
             {
-                GameObject.Find("Default").GetComponent<Button>().interactable = false;
+                GameObject ButtonDefault = GameObject.Find("Default");
+                ButtonDefault.GetComponent<Button>().interactable = false;
+                ButtonDefault.SetActive(false);
+            }
+            else
+            {
+                GameObject ButtonDefault = GameObject.Find("Default");
+                ButtonDefault.GetComponent<Button>().interactable = true;
+                ButtonDefault.SetActive(true);
             }
             GameObject.Find("GeraeGekauft").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.GERAET_GEKAUFT;
-            if (Variablen.sendeMailliste.GERAET_GEKAUFT == "")
+            if (Variablen.sendeMailliste.GERAET_GEKAUFT == "" || Variablen.sendeMailliste.GERAET_GEKAUFT == null)
             {
-                GameObject.Find("GeraeGekauft").GetComponent<Button>().interactable = false;
+                GameObject ButtonGeraetGekauft = GameObject.Find("GeraeGekauft");
+                ButtonGeraetGekauft.GetComponent<Button>().interactable = false;
+                ButtonGeraetGekauft.SetActive(false);
+            }
+            else
+            {
+                GameObject ButtonGeraetGekauft = GameObject.Find("GeraeGekauft");
+                ButtonGeraetGekauft.GetComponent<Button>().interactable = true;
+                ButtonGeraetGekauft.SetActive(true);
             }
             GameObject.Find("Abmahnung").GetComponentInChildren<Text>().text = Variablen.sendeMailliste.ABMAHNUNG;
-            if (Variablen.sendeMailliste.ABMAHNUNG == "")
+            if (Variablen.sendeMailliste.ABMAHNUNG == "" || Variablen.sendeMailliste.ABMAHNUNG == null)
             {
-                GameObject.Find("Abmahnung").GetComponent<Button>().interactable = false;
+                GameObject ButtonAbmahnung = GameObject.Find("Abmahnung");
+                ButtonAbmahnung.GetComponent<Button>().interactable = false;
+                ButtonAbmahnung.SetActive(false);
+            }
+            else
+            {
+                GameObject ButtonAbmahnung = GameObject.Find("Abmahnung");
+                ButtonAbmahnung.GetComponent<Button>().interactable = true;
+                ButtonAbmahnung.SetActive(true);
             }
         }
     }
@@ -179,17 +211,17 @@ public class MailsWindow : MonoBehaviour
 
         bool mailVonSponsor = false;
 
-        for(int i = 0; i < Variablen.geworbeneSponsoren.Count; i++)
+        for (int i = 0; i < Variablen.geworbeneSponsoren.Count; i++)
         {
             mailVonSponsor = true;
-            for(int j = 0; j < Variablen.geworbeneSponsoren[i].Length && mailVonSponsor; j++)
+            for (int j = 0; j < Variablen.geworbeneSponsoren[i].Length && mailVonSponsor; j++)
             {
-                if(Variablen.geworbeneSponsoren[i][j] != Variablen.postfach.mailliste[id].absender[j])
+                if (Variablen.geworbeneSponsoren[i][j] != Variablen.postfach.mailliste[id].absender[j])
                 {
                     mailVonSponsor = false;
                 }
             }
-            if(mailVonSponsor)
+            if (mailVonSponsor)
             {
                 Variablen.geworbeneSponsoren.RemoveAt(i);
             }
@@ -198,7 +230,7 @@ public class MailsWindow : MonoBehaviour
         {
             Variablen.sponsorenNeuLaden = true;
         }
-        
+
     }
 
     public void schliesseMail()

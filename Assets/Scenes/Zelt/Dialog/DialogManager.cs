@@ -99,7 +99,7 @@ public class DialogManager : MonoBehaviour
             }
             if (Variablen.anamnese.option.Equals("ultraschall"))
             {
-                GameObject.Find("ZeigeUltraschall").GetComponent<Button>().interactable = true;
+                //GameObject.Find("ZeigeUltraschall").GetComponent<Button>().interactable = true; //Wenn Ultraschallbild geht kann das hier wieder auskommentiert werden
             }
             counter = 0;
         }

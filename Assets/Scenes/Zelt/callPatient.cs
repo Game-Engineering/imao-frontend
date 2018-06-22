@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 using System;
 
@@ -90,10 +91,10 @@ public class callPatient : MonoBehaviour
             erstellePatient();
             Variablen.patientVorhanden = true;
             Debug.Log("Patient wird erstellt ...");
-            GameObject.Find("StarteDialog").GetComponent<UnityEngine.UI.Button>().interactable = true;
-            GameObject.Find("StelleDiagnose").GetComponent<UnityEngine.UI.Button>().interactable = true;
-            GameObject.Find("RufePatienten").GetComponent<UnityEngine.UI.Button>().interactable = false;
-            GameObject.Find("NeueRunde").GetComponent<UnityEngine.UI.Button>().interactable = false;
+            GameObject.Find("StarteDialog").GetComponent<Button>().interactable = true;
+            GameObject.Find("StelleDiagnose").GetComponent<Button>().interactable = true;
+            GameObject.Find("RufePatienten").GetComponent<Button>().interactable = false;
+            GameObject.Find("NeueRunde").GetComponent<Button>().interactable = false;
 
         }
     }
@@ -107,10 +108,11 @@ public class callPatient : MonoBehaviour
 
             StartCoroutine(getPatient());
             Variablen.rundeArzt.wartendePatienten = (Variablen.rundeArzt.wartendePatienten - 1); // <-- C# hat manchmal Probleme mit ++/--
+            GameObject.Find("PatientenWert").GetComponent<Text>().text = Variablen.rundeArzt.wartendePatienten + "";
       }
         else
         {
-            Debug.Log("Patient bereits vorhanden");
+            Debug.Log("Patient bereits vorhanden oder keine wartenden Patienten mehr");
         }
 
     }
