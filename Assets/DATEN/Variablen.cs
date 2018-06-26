@@ -79,7 +79,7 @@ public class Variablen
 public class RundeArzt
 {
     public int budget;
-    // public string nachricht;
+    public string nachricht;
     public int ruf;
     public int runde;
     public int wartendePatienten;

@@ -12,20 +12,23 @@ public class WikiNavigationScript : MonoBehaviour
     public Image scrollerUKat;
 
     private string antwort;
-    private string kategorien = "localhost:8080/imao/api/spiel/getWikiKategorien/";
-    private string elemente = "localhost:8080/imao/api/spiel/getWikiElement/";
+    private string kategorien = Konstanten.URLfest + "getWikiKategorien/";
+    private string elemente = Konstanten.URLfest + "getWikiElement/";
+
     private int selectedKat = -1;
     private int counter = 0;
 
     public void zeigeWikiWindow()
     {
         StartCoroutine(getWikiKategorien());
-        can.gameObject.SetActive(true);
+        // can.gameObject.SetActive(true);
         Variablen.bildschirmactive = true;
     }
 
     IEnumerator getWikiKategorien()
     {
+        Debug.Log(elemente);
+        Debug.Log(kategorien);
         UnityWebRequest aufruf = new UnityWebRequest(kategorien);
         aufruf.downloadHandler = new DownloadHandlerBuffer();
 
@@ -56,6 +59,9 @@ public class WikiNavigationScript : MonoBehaviour
                     but.gameObject.SetActive(false);
                 }
             }
+
+            scrollerKat.gameObject.SetActive(true);
+
             counter = 0;
             can.gameObject.SetActive(true);
         }
@@ -70,6 +76,8 @@ public class WikiNavigationScript : MonoBehaviour
 
     IEnumerator getWikiElement(int ID)
     {
+        Debug.Log(elemente);
+        Debug.Log(kategorien);
         UnityWebRequest aufruf = new UnityWebRequest(elemente + ID);
         aufruf.downloadHandler = new DownloadHandlerBuffer();
 
@@ -86,9 +94,11 @@ public class WikiNavigationScript : MonoBehaviour
             antwort = aufruf.downloadHandler.text;
             Variablen.unterkategorien = JsonUtility.FromJson<Unterkategorien>(antwort);
 
+            Debug.Log(antwort);
+
             foreach (Button but in scrollerUKat.GetComponentsInChildren<Button>(true))
             {
-                if (counter < Variablen.wikiKategorien.Kategorien.Count)
+                if (counter < Variablen.unterkategorien.response.Count)
                 {
                     but.GetComponentInChildren<Text>(true).text = Variablen.unterkategorien.response[counter].question;
                     but.gameObject.SetActive(true);
@@ -100,6 +110,9 @@ public class WikiNavigationScript : MonoBehaviour
                     but.gameObject.SetActive(false);
                 }
             }
+
+            scrollerUKat.gameObject.SetActive(true);
+
             counter = 0;
         }
     }
@@ -107,7 +120,7 @@ public class WikiNavigationScript : MonoBehaviour
 
     public void getAntwort(int ID)
     {
-        StartCoroutine(getWikiElement(ID));
+        StartCoroutine(getWikiAntwort(ID));
     }
 
     IEnumerator getWikiAntwort(int ID)

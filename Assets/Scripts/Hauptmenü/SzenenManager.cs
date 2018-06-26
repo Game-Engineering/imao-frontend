@@ -14,7 +14,7 @@ public class SzenenManager : MonoBehaviour
     public void setzeURL()
     {
         Konstanten.URL = input.text + "/imao/api/spiel/";
-        Debug.Log(Konstanten.URL);
+        Konstanten.URLfest = input.text + "/imao/api/spiel/";
     }
 
     public void Beende()
