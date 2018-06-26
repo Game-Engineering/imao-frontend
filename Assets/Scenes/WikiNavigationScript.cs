@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.EventSystems;
 
 public class WikiNavigationScript : MonoBehaviour
 {
@@ -76,8 +77,7 @@ public class WikiNavigationScript : MonoBehaviour
 
     IEnumerator getWikiElement(int ID)
     {
-        Debug.Log(elemente);
-        Debug.Log(kategorien);
+       
         UnityWebRequest aufruf = new UnityWebRequest(elemente + ID);
         aufruf.downloadHandler = new DownloadHandlerBuffer();
 
@@ -120,6 +120,16 @@ public class WikiNavigationScript : MonoBehaviour
 
     public void getAntwort(int ID)
     {
+        GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
+
+        foreach (Unterkategorie uk in Variablen.unterkategorien.response)
+        {
+            if (clickedButton.GetComponentInChildren<Text>().text == uk.question)
+            {
+                ID = uk.id;
+                break;
+            }
+        }
         StartCoroutine(getWikiAntwort(ID));
     }
 

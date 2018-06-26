@@ -269,6 +269,7 @@ public class WikiKategorien
 public class Unterkategorien
 {
     public string typ;
+    public int id;
     public List<Unterkategorie> response;
 }
 
